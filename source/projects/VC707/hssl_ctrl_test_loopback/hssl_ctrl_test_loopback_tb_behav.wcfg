@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="hssl_ctrl_test_loopback_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="aurora_comp_dec_1l" />
+            <top_module name="glbl" />
+            <top_module name="hil_lib" />
+            <top_module name="hssl_comp_dec" />
+            <top_module name="hssl_comp_dec_1l" />
+            <top_module name="hssl_ctrl_test_loopback_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="135823321001fs"></ZoomEndTime>
+      <Cursor1Time time="26495436000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="204"></NameColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject fp_name="group108" type="group">
+      <obj_property name="label">u0_hssl_ctrl_test</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/i_clk_p" type="logic">
+         <obj_property name="ElementShortName">i_clk_p</obj_property>
+         <obj_property name="ObjectShortName">i_clk_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/i_clk_n" type="logic">
+         <obj_property name="ElementShortName">i_clk_n</obj_property>
+         <obj_property name="ObjectShortName">i_clk_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/i_reset_n" type="logic">
+         <obj_property name="ElementShortName">i_reset_n</obj_property>
+         <obj_property name="ObjectShortName">i_reset_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/i_unit_id" type="array">
+         <obj_property name="ElementShortName">i_unit_id[3:0]</obj_property>
+         <obj_property name="ObjectShortName">i_unit_id[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/o_led" type="array">
+         <obj_property name="ElementShortName">o_led[3:0]</obj_property>
+         <obj_property name="ObjectShortName">o_led[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/i_sw" type="array">
+         <obj_property name="ElementShortName">i_sw[3:0]</obj_property>
+         <obj_property name="ObjectShortName">i_sw[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/i_gtx_clk_p" type="logic">
+         <obj_property name="ElementShortName">i_gtx_clk_p</obj_property>
+         <obj_property name="ObjectShortName">i_gtx_clk_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/i_gtx_clk_n" type="logic">
+         <obj_property name="ElementShortName">i_gtx_clk_n</obj_property>
+         <obj_property name="ObjectShortName">i_gtx_clk_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/sfp_tx_disable_o" type="logic">
+         <obj_property name="ElementShortName">sfp_tx_disable_o</obj_property>
+         <obj_property name="ObjectShortName">sfp_tx_disable_o</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/o_link_up" type="logic">
+         <obj_property name="ElementShortName">o_link_up</obj_property>
+         <obj_property name="ObjectShortName">o_link_up</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/o_channel_up" type="logic">
+         <obj_property name="ElementShortName">o_channel_up</obj_property>
+         <obj_property name="ObjectShortName">o_channel_up</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/o_error" type="logic">
+         <obj_property name="ElementShortName">o_error</obj_property>
+         <obj_property name="ObjectShortName">o_error</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/i_gtx_rx_p" type="logic">
+         <obj_property name="ElementShortName">i_gtx_rx_p</obj_property>
+         <obj_property name="ObjectShortName">i_gtx_rx_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/i_gtx_rx_n" type="logic">
+         <obj_property name="ElementShortName">i_gtx_rx_n</obj_property>
+         <obj_property name="ObjectShortName">i_gtx_rx_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/o_gtx_tx_p" type="logic">
+         <obj_property name="ElementShortName">o_gtx_tx_p</obj_property>
+         <obj_property name="ObjectShortName">o_gtx_tx_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/o_gtx_tx_n" type="logic">
+         <obj_property name="ElementShortName">o_gtx_tx_n</obj_property>
+         <obj_property name="ObjectShortName">o_gtx_tx_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/reset_n" type="logic">
+         <obj_property name="ElementShortName">reset_n</obj_property>
+         <obj_property name="ObjectShortName">reset_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/gtx_rst_n" type="logic">
+         <obj_property name="ElementShortName">gtx_rst_n</obj_property>
+         <obj_property name="ObjectShortName">gtx_rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/cgu_rst" type="logic">
+         <obj_property name="ElementShortName">cgu_rst</obj_property>
+         <obj_property name="ObjectShortName">cgu_rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/reset_from_clk_wiz" type="logic">
+         <obj_property name="ElementShortName">reset_from_clk_wiz</obj_property>
+         <obj_property name="ObjectShortName">reset_from_clk_wiz</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/dest_unit" type="array">
+         <obj_property name="ElementShortName">dest_unit[3:0]</obj_property>
+         <obj_property name="ObjectShortName">dest_unit[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/dest_unit_en" type="logic">
+         <obj_property name="ElementShortName">dest_unit_en</obj_property>
+         <obj_property name="ObjectShortName">dest_unit_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/dest_unit_tc" type="logic">
+         <obj_property name="ElementShortName">dest_unit_tc</obj_property>
+         <obj_property name="ObjectShortName">dest_unit_tc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/sec_cnt" type="array">
+         <obj_property name="ElementShortName">sec_cnt[31:0]</obj_property>
+         <obj_property name="ObjectShortName">sec_cnt[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/sec_cnt_en" type="logic">
+         <obj_property name="ElementShortName">sec_cnt_en</obj_property>
+         <obj_property name="ObjectShortName">sec_cnt_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/sec_cnt_tc" type="logic">
+         <obj_property name="ElementShortName">sec_cnt_tc</obj_property>
+         <obj_property name="ObjectShortName">sec_cnt_tc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/tx_req" type="logic">
+         <obj_property name="ElementShortName">tx_req</obj_property>
+         <obj_property name="ObjectShortName">tx_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/tx_ack" type="logic">
+         <obj_property name="ElementShortName">tx_ack</obj_property>
+         <obj_property name="ObjectShortName">tx_ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/tx_data" type="array">
+         <obj_property name="ElementShortName">tx_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/tx_data_we" type="logic">
+         <obj_property name="ElementShortName">tx_data_we</obj_property>
+         <obj_property name="ObjectShortName">tx_data_we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/tx_paylod_size" type="array">
+         <obj_property name="ElementShortName">tx_paylod_size[7:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_paylod_size[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/rx_valid" type="logic">
+         <obj_property name="ElementShortName">rx_valid</obj_property>
+         <obj_property name="ObjectShortName">rx_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/rx_data" type="array">
+         <obj_property name="ElementShortName">rx_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/msg_heder" type="array">
+         <obj_property name="ElementShortName">msg_heder[31:0]</obj_property>
+         <obj_property name="ObjectShortName">msg_heder[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/data_send_en" type="logic">
+         <obj_property name="ElementShortName">data_send_en</obj_property>
+         <obj_property name="ObjectShortName">data_send_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/send_data_pckt" type="array">
+         <obj_property name="ElementShortName">send_data_pckt[7:0]</obj_property>
+         <obj_property name="ObjectShortName">send_data_pckt[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/sync_m2s_data_out" type="array">
+         <obj_property name="ElementShortName">sync_m2s_data_out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_m2s_data_out[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/sync_a2a_data_out" type="array">
+         <obj_property name="ElementShortName">sync_a2a_data_out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_a2a_data_out[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_lane_up" type="logic">
+         <obj_property name="ElementShortName">link_lane_up</obj_property>
+         <obj_property name="ObjectShortName">link_lane_up</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_lane_up_d" type="logic">
+         <obj_property name="ElementShortName">link_lane_up_d</obj_property>
+         <obj_property name="ObjectShortName">link_lane_up_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_lane_up_dd" type="logic">
+         <obj_property name="ElementShortName">link_lane_up_dd</obj_property>
+         <obj_property name="ObjectShortName">link_lane_up_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_channel_up" type="logic">
+         <obj_property name="ElementShortName">link_channel_up</obj_property>
+         <obj_property name="ObjectShortName">link_channel_up</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_channel_up_d" type="logic">
+         <obj_property name="ElementShortName">link_channel_up_d</obj_property>
+         <obj_property name="ObjectShortName">link_channel_up_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_channel_up_dd" type="logic">
+         <obj_property name="ElementShortName">link_channel_up_dd</obj_property>
+         <obj_property name="ObjectShortName">link_channel_up_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_hard_err" type="logic">
+         <obj_property name="ElementShortName">link_hard_err</obj_property>
+         <obj_property name="ObjectShortName">link_hard_err</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_hard_err_d" type="logic">
+         <obj_property name="ElementShortName">link_hard_err_d</obj_property>
+         <obj_property name="ObjectShortName">link_hard_err_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_hard_err_dd" type="logic">
+         <obj_property name="ElementShortName">link_hard_err_dd</obj_property>
+         <obj_property name="ObjectShortName">link_hard_err_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_soft_err" type="logic">
+         <obj_property name="ElementShortName">link_soft_err</obj_property>
+         <obj_property name="ObjectShortName">link_soft_err</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_soft_err_d" type="logic">
+         <obj_property name="ElementShortName">link_soft_err_d</obj_property>
+         <obj_property name="ObjectShortName">link_soft_err_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_soft_err_dd" type="logic">
+         <obj_property name="ElementShortName">link_soft_err_dd</obj_property>
+         <obj_property name="ObjectShortName">link_soft_err_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_frame_err" type="logic">
+         <obj_property name="ElementShortName">link_frame_err</obj_property>
+         <obj_property name="ObjectShortName">link_frame_err</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_frame_err_d" type="logic">
+         <obj_property name="ElementShortName">link_frame_err_d</obj_property>
+         <obj_property name="ObjectShortName">link_frame_err_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/link_frame_err_dd" type="logic">
+         <obj_property name="ElementShortName">link_frame_err_dd</obj_property>
+         <obj_property name="ObjectShortName">link_frame_err_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/rx_fifo_full" type="logic">
+         <obj_property name="ElementShortName">rx_fifo_full</obj_property>
+         <obj_property name="ObjectShortName">rx_fifo_full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/tx_fifo_full" type="logic">
+         <obj_property name="ElementShortName">tx_fifo_full</obj_property>
+         <obj_property name="ObjectShortName">tx_fifo_full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/u0_ctrl_gtx_clk_p" type="logic">
+         <obj_property name="ElementShortName">u0_ctrl_gtx_clk_p</obj_property>
+         <obj_property name="ObjectShortName">u0_ctrl_gtx_clk_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/u0_ctrl_gtx_clk_n" type="logic">
+         <obj_property name="ElementShortName">u0_ctrl_gtx_clk_n</obj_property>
+         <obj_property name="ObjectShortName">u0_ctrl_gtx_clk_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/u0_ctrl_gtx_rx_p" type="logic">
+         <obj_property name="ElementShortName">u0_ctrl_gtx_rx_p</obj_property>
+         <obj_property name="ObjectShortName">u0_ctrl_gtx_rx_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/u0_ctrl_gtx_rx_n" type="logic">
+         <obj_property name="ElementShortName">u0_ctrl_gtx_rx_n</obj_property>
+         <obj_property name="ObjectShortName">u0_ctrl_gtx_rx_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/gtx_tx_p_buff" type="logic">
+         <obj_property name="ElementShortName">gtx_tx_p_buff</obj_property>
+         <obj_property name="ObjectShortName">gtx_tx_p_buff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/gtx_tx_n_buff" type="logic">
+         <obj_property name="ElementShortName">gtx_tx_n_buff</obj_property>
+         <obj_property name="ObjectShortName">gtx_tx_n_buff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/data_gen" type="array">
+         <obj_property name="ElementShortName">data_gen[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_gen[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/data_gen_en" type="logic">
+         <obj_property name="ElementShortName">data_gen_en</obj_property>
+         <obj_property name="ObjectShortName">data_gen_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/sync_a2a_data" type="array">
+         <obj_property name="ElementShortName">sync_a2a_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_a2a_data[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/unit_id" type="array">
+         <obj_property name="ElementShortName">unit_id[3:0]</obj_property>
+         <obj_property name="ObjectShortName">unit_id[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/hssl_ctrl_reset_n" type="logic">
+         <obj_property name="ElementShortName">hssl_ctrl_reset_n</obj_property>
+         <obj_property name="ObjectShortName">hssl_ctrl_reset_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/sync_m2s_data_in" type="array">
+         <obj_property name="ElementShortName">sync_m2s_data_in[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_m2s_data_in[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/hssl_ctrl_debug_port" type="array">
+         <obj_property name="ElementShortName">hssl_ctrl_debug_port[20:0]</obj_property>
+         <obj_property name="ObjectShortName">hssl_ctrl_debug_port[20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/fsm_state" type="other">
+         <obj_property name="ElementShortName">fsm_state</obj_property>
+         <obj_property name="ObjectShortName">fsm_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/NO_OF_UNIT" type="other">
+         <obj_property name="ElementShortName">NO_OF_UNIT</obj_property>
+         <obj_property name="ObjectShortName">NO_OF_UNIT</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u0_hssl_ctrl_test_1l/ONE_SEC_TC" type="other">
+         <obj_property name="ElementShortName">ONE_SEC_TC</obj_property>
+         <obj_property name="ObjectShortName">ONE_SEC_TC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_clk_p" type="logic">
+         <obj_property name="ElementShortName">i_clk_p</obj_property>
+         <obj_property name="ObjectShortName">i_clk_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_clk_n" type="logic">
+         <obj_property name="ElementShortName">i_clk_n</obj_property>
+         <obj_property name="ObjectShortName">i_clk_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_reset_n" type="logic">
+         <obj_property name="ElementShortName">i_reset_n</obj_property>
+         <obj_property name="ObjectShortName">i_reset_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_unit_id" type="array">
+         <obj_property name="ElementShortName">i_unit_id[3:0]</obj_property>
+         <obj_property name="ObjectShortName">i_unit_id[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/o_led" type="array">
+         <obj_property name="ElementShortName">o_led[3:0]</obj_property>
+         <obj_property name="ObjectShortName">o_led[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_sw" type="array">
+         <obj_property name="ElementShortName">i_sw[3:0]</obj_property>
+         <obj_property name="ObjectShortName">i_sw[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_gtx_clk_p" type="logic">
+         <obj_property name="ElementShortName">i_gtx_clk_p</obj_property>
+         <obj_property name="ObjectShortName">i_gtx_clk_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_gtx_clk_n" type="logic">
+         <obj_property name="ElementShortName">i_gtx_clk_n</obj_property>
+         <obj_property name="ObjectShortName">i_gtx_clk_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sfp_tx_disable_o" type="logic">
+         <obj_property name="ElementShortName">sfp_tx_disable_o</obj_property>
+         <obj_property name="ObjectShortName">sfp_tx_disable_o</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/o_link_up" type="logic">
+         <obj_property name="ElementShortName">o_link_up</obj_property>
+         <obj_property name="ObjectShortName">o_link_up</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/o_channel_up" type="logic">
+         <obj_property name="ElementShortName">o_channel_up</obj_property>
+         <obj_property name="ObjectShortName">o_channel_up</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/o_error" type="logic">
+         <obj_property name="ElementShortName">o_error</obj_property>
+         <obj_property name="ObjectShortName">o_error</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_gtx_rx_p" type="logic">
+         <obj_property name="ElementShortName">i_gtx_rx_p</obj_property>
+         <obj_property name="ObjectShortName">i_gtx_rx_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_gtx_rx_n" type="logic">
+         <obj_property name="ElementShortName">i_gtx_rx_n</obj_property>
+         <obj_property name="ObjectShortName">i_gtx_rx_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/o_gtx_tx_p" type="logic">
+         <obj_property name="ElementShortName">o_gtx_tx_p</obj_property>
+         <obj_property name="ObjectShortName">o_gtx_tx_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/o_gtx_tx_n" type="logic">
+         <obj_property name="ElementShortName">o_gtx_tx_n</obj_property>
+         <obj_property name="ObjectShortName">o_gtx_tx_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/reset_n" type="logic">
+         <obj_property name="ElementShortName">reset_n</obj_property>
+         <obj_property name="ObjectShortName">reset_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/gtx_rst_n" type="logic">
+         <obj_property name="ElementShortName">gtx_rst_n</obj_property>
+         <obj_property name="ObjectShortName">gtx_rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/cgu_rst" type="logic">
+         <obj_property name="ElementShortName">cgu_rst</obj_property>
+         <obj_property name="ObjectShortName">cgu_rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/reset_from_clk_wiz" type="logic">
+         <obj_property name="ElementShortName">reset_from_clk_wiz</obj_property>
+         <obj_property name="ObjectShortName">reset_from_clk_wiz</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/dest_unit" type="array">
+         <obj_property name="ElementShortName">dest_unit[3:0]</obj_property>
+         <obj_property name="ObjectShortName">dest_unit[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/dest_unit_en" type="logic">
+         <obj_property name="ElementShortName">dest_unit_en</obj_property>
+         <obj_property name="ObjectShortName">dest_unit_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/dest_unit_tc" type="logic">
+         <obj_property name="ElementShortName">dest_unit_tc</obj_property>
+         <obj_property name="ObjectShortName">dest_unit_tc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sec_cnt" type="array">
+         <obj_property name="ElementShortName">sec_cnt[31:0]</obj_property>
+         <obj_property name="ObjectShortName">sec_cnt[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sec_cnt_en" type="logic">
+         <obj_property name="ElementShortName">sec_cnt_en</obj_property>
+         <obj_property name="ObjectShortName">sec_cnt_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sec_cnt_tc" type="logic">
+         <obj_property name="ElementShortName">sec_cnt_tc</obj_property>
+         <obj_property name="ObjectShortName">sec_cnt_tc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/tx_req" type="logic">
+         <obj_property name="ElementShortName">tx_req</obj_property>
+         <obj_property name="ObjectShortName">tx_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/tx_ack" type="logic">
+         <obj_property name="ElementShortName">tx_ack</obj_property>
+         <obj_property name="ObjectShortName">tx_ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/tx_data" type="array">
+         <obj_property name="ElementShortName">tx_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/tx_data_we" type="logic">
+         <obj_property name="ElementShortName">tx_data_we</obj_property>
+         <obj_property name="ObjectShortName">tx_data_we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/tx_paylod_size" type="array">
+         <obj_property name="ElementShortName">tx_paylod_size[7:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_paylod_size[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_valid" type="logic">
+         <obj_property name="ElementShortName">rx_valid</obj_property>
+         <obj_property name="ObjectShortName">rx_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_valid_d" type="logic">
+         <obj_property name="ElementShortName">rx_valid_d</obj_property>
+         <obj_property name="ObjectShortName">rx_valid_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_data" type="array">
+         <obj_property name="ElementShortName">rx_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/msg_heder" type="array">
+         <obj_property name="ElementShortName">msg_heder[31:0]</obj_property>
+         <obj_property name="ObjectShortName">msg_heder[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/data_send_en" type="logic">
+         <obj_property name="ElementShortName">data_send_en</obj_property>
+         <obj_property name="ObjectShortName">data_send_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/send_data_pckt" type="array">
+         <obj_property name="ElementShortName">send_data_pckt[7:0]</obj_property>
+         <obj_property name="ObjectShortName">send_data_pckt[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sync_m2s_data_out" type="array">
+         <obj_property name="ElementShortName">sync_m2s_data_out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_m2s_data_out[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sync_a2a_data_out" type="array">
+         <obj_property name="ElementShortName">sync_a2a_data_out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_a2a_data_out[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_lane_up" type="logic">
+         <obj_property name="ElementShortName">link_lane_up</obj_property>
+         <obj_property name="ObjectShortName">link_lane_up</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_lane_up_d" type="logic">
+         <obj_property name="ElementShortName">link_lane_up_d</obj_property>
+         <obj_property name="ObjectShortName">link_lane_up_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_lane_up_dd" type="logic">
+         <obj_property name="ElementShortName">link_lane_up_dd</obj_property>
+         <obj_property name="ObjectShortName">link_lane_up_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_channel_up" type="logic">
+         <obj_property name="ElementShortName">link_channel_up</obj_property>
+         <obj_property name="ObjectShortName">link_channel_up</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_channel_up_d" type="logic">
+         <obj_property name="ElementShortName">link_channel_up_d</obj_property>
+         <obj_property name="ObjectShortName">link_channel_up_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_channel_up_dd" type="logic">
+         <obj_property name="ElementShortName">link_channel_up_dd</obj_property>
+         <obj_property name="ObjectShortName">link_channel_up_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_hard_err" type="logic">
+         <obj_property name="ElementShortName">link_hard_err</obj_property>
+         <obj_property name="ObjectShortName">link_hard_err</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_hard_err_d" type="logic">
+         <obj_property name="ElementShortName">link_hard_err_d</obj_property>
+         <obj_property name="ObjectShortName">link_hard_err_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_hard_err_dd" type="logic">
+         <obj_property name="ElementShortName">link_hard_err_dd</obj_property>
+         <obj_property name="ObjectShortName">link_hard_err_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_soft_err" type="logic">
+         <obj_property name="ElementShortName">link_soft_err</obj_property>
+         <obj_property name="ObjectShortName">link_soft_err</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_soft_err_d" type="logic">
+         <obj_property name="ElementShortName">link_soft_err_d</obj_property>
+         <obj_property name="ObjectShortName">link_soft_err_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_soft_err_dd" type="logic">
+         <obj_property name="ElementShortName">link_soft_err_dd</obj_property>
+         <obj_property name="ObjectShortName">link_soft_err_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_frame_err" type="logic">
+         <obj_property name="ElementShortName">link_frame_err</obj_property>
+         <obj_property name="ObjectShortName">link_frame_err</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_frame_err_d" type="logic">
+         <obj_property name="ElementShortName">link_frame_err_d</obj_property>
+         <obj_property name="ObjectShortName">link_frame_err_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_frame_err_dd" type="logic">
+         <obj_property name="ElementShortName">link_frame_err_dd</obj_property>
+         <obj_property name="ObjectShortName">link_frame_err_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_fifo_full" type="logic">
+         <obj_property name="ElementShortName">rx_fifo_full</obj_property>
+         <obj_property name="ObjectShortName">rx_fifo_full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/tx_fifo_full" type="logic">
+         <obj_property name="ElementShortName">tx_fifo_full</obj_property>
+         <obj_property name="ObjectShortName">tx_fifo_full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/u0_ctrl_gtx_clk_p" type="logic">
+         <obj_property name="ElementShortName">u0_ctrl_gtx_clk_p</obj_property>
+         <obj_property name="ObjectShortName">u0_ctrl_gtx_clk_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/u0_ctrl_gtx_clk_n" type="logic">
+         <obj_property name="ElementShortName">u0_ctrl_gtx_clk_n</obj_property>
+         <obj_property name="ObjectShortName">u0_ctrl_gtx_clk_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/u0_ctrl_gtx_rx_p" type="logic">
+         <obj_property name="ElementShortName">u0_ctrl_gtx_rx_p</obj_property>
+         <obj_property name="ObjectShortName">u0_ctrl_gtx_rx_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/u0_ctrl_gtx_rx_n" type="logic">
+         <obj_property name="ElementShortName">u0_ctrl_gtx_rx_n</obj_property>
+         <obj_property name="ObjectShortName">u0_ctrl_gtx_rx_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/gtx_tx_p_buff" type="logic">
+         <obj_property name="ElementShortName">gtx_tx_p_buff</obj_property>
+         <obj_property name="ObjectShortName">gtx_tx_p_buff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/gtx_tx_n_buff" type="logic">
+         <obj_property name="ElementShortName">gtx_tx_n_buff</obj_property>
+         <obj_property name="ObjectShortName">gtx_tx_n_buff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/data_gen" type="array">
+         <obj_property name="ElementShortName">data_gen[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_gen[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/data_gen_en" type="logic">
+         <obj_property name="ElementShortName">data_gen_en</obj_property>
+         <obj_property name="ObjectShortName">data_gen_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sync_a2a_data" type="array">
+         <obj_property name="ElementShortName">sync_a2a_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_a2a_data[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/unit_id" type="array">
+         <obj_property name="ElementShortName">unit_id[3:0]</obj_property>
+         <obj_property name="ObjectShortName">unit_id[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/hssl_ctrl_reset_n" type="logic">
+         <obj_property name="ElementShortName">hssl_ctrl_reset_n</obj_property>
+         <obj_property name="ObjectShortName">hssl_ctrl_reset_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sync_m2s_data_in" type="array">
+         <obj_property name="ElementShortName">sync_m2s_data_in[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_m2s_data_in[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/hssl_ctrl_debug_port" type="array">
+         <obj_property name="ElementShortName">hssl_ctrl_debug_port[20:0]</obj_property>
+         <obj_property name="ObjectShortName">hssl_ctrl_debug_port[20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/fsm_state" type="other">
+         <obj_property name="ElementShortName">fsm_state</obj_property>
+         <obj_property name="ObjectShortName">fsm_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/loopback_fsm" type="other">
+         <obj_property name="ElementShortName">loopback_fsm</obj_property>
+         <obj_property name="ObjectShortName">loopback_fsm</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_mem" type="array">
+         <obj_property name="ElementShortName">rx_mem[0:127][31:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_mem[0:127][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/cnt_rx" type="array">
+         <obj_property name="ElementShortName">cnt_rx[6:0]</obj_property>
+         <obj_property name="ObjectShortName">cnt_rx[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/cnt_tx" type="array">
+         <obj_property name="ElementShortName">cnt_tx[6:0]</obj_property>
+         <obj_property name="ObjectShortName">cnt_tx[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/cnt_tx_tc" type="logic">
+         <obj_property name="ElementShortName">cnt_tx_tc</obj_property>
+         <obj_property name="ObjectShortName">cnt_tx_tc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_valid_fe" type="logic">
+         <obj_property name="ElementShortName">rx_valid_fe</obj_property>
+         <obj_property name="ObjectShortName">rx_valid_fe</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_valid_re" type="logic">
+         <obj_property name="ElementShortName">rx_valid_re</obj_property>
+         <obj_property name="ObjectShortName">rx_valid_re</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/parsed_header" type="array">
+         <obj_property name="ElementShortName">parsed_header[31:0]</obj_property>
+         <obj_property name="ObjectShortName">parsed_header[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_payload_size" type="array">
+         <obj_property name="ElementShortName">rx_payload_size[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_payload_size[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/protocol_version" type="array">
+         <obj_property name="ElementShortName">protocol_version[7:0]</obj_property>
+         <obj_property name="ObjectShortName">protocol_version[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/unassigned_data" type="array">
+         <obj_property name="ElementShortName">unassigned_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">unassigned_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_src_id" type="array">
+         <obj_property name="ElementShortName">rx_src_id[3:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_src_id[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_dst_id" type="array">
+         <obj_property name="ElementShortName">rx_dst_id[3:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_dst_id[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/NO_OF_UNIT" type="other">
+         <obj_property name="ElementShortName">NO_OF_UNIT</obj_property>
+         <obj_property name="ObjectShortName">NO_OF_UNIT</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/ONE_SEC_TC" type="other">
+         <obj_property name="ElementShortName">ONE_SEC_TC</obj_property>
+         <obj_property name="ObjectShortName">ONE_SEC_TC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/VAR_NUM_PER_LOOPBACK_STREAM" type="other">
+         <obj_property name="ElementShortName">VAR_NUM_PER_LOOPBACK_STREAM</obj_property>
+         <obj_property name="ObjectShortName">VAR_NUM_PER_LOOPBACK_STREAM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/DATA_WIDTH" type="other">
+         <obj_property name="ElementShortName">DATA_WIDTH</obj_property>
+         <obj_property name="ObjectShortName">DATA_WIDTH</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/RX_MEM_DEPTH" type="other">
+         <obj_property name="ElementShortName">RX_MEM_DEPTH</obj_property>
+         <obj_property name="ObjectShortName">RX_MEM_DEPTH</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group287" type="group">
+      <obj_property name="label">u1_hssl_ctrl_test_loopback</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_clk_p" type="logic">
+         <obj_property name="ElementShortName">i_clk_p</obj_property>
+         <obj_property name="ObjectShortName">i_clk_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_clk_n" type="logic">
+         <obj_property name="ElementShortName">i_clk_n</obj_property>
+         <obj_property name="ObjectShortName">i_clk_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_reset_n" type="logic">
+         <obj_property name="ElementShortName">i_reset_n</obj_property>
+         <obj_property name="ObjectShortName">i_reset_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_unit_id" type="array">
+         <obj_property name="ElementShortName">i_unit_id[3:0]</obj_property>
+         <obj_property name="ObjectShortName">i_unit_id[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/o_led" type="array">
+         <obj_property name="ElementShortName">o_led[3:0]</obj_property>
+         <obj_property name="ObjectShortName">o_led[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_sw" type="array">
+         <obj_property name="ElementShortName">i_sw[3:0]</obj_property>
+         <obj_property name="ObjectShortName">i_sw[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_gtx_clk_p" type="logic">
+         <obj_property name="ElementShortName">i_gtx_clk_p</obj_property>
+         <obj_property name="ObjectShortName">i_gtx_clk_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_gtx_clk_n" type="logic">
+         <obj_property name="ElementShortName">i_gtx_clk_n</obj_property>
+         <obj_property name="ObjectShortName">i_gtx_clk_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sfp_tx_disable_o" type="logic">
+         <obj_property name="ElementShortName">sfp_tx_disable_o</obj_property>
+         <obj_property name="ObjectShortName">sfp_tx_disable_o</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/o_link_up" type="logic">
+         <obj_property name="ElementShortName">o_link_up</obj_property>
+         <obj_property name="ObjectShortName">o_link_up</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/o_channel_up" type="logic">
+         <obj_property name="ElementShortName">o_channel_up</obj_property>
+         <obj_property name="ObjectShortName">o_channel_up</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/o_error" type="logic">
+         <obj_property name="ElementShortName">o_error</obj_property>
+         <obj_property name="ObjectShortName">o_error</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_gtx_rx_p" type="logic">
+         <obj_property name="ElementShortName">i_gtx_rx_p</obj_property>
+         <obj_property name="ObjectShortName">i_gtx_rx_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/i_gtx_rx_n" type="logic">
+         <obj_property name="ElementShortName">i_gtx_rx_n</obj_property>
+         <obj_property name="ObjectShortName">i_gtx_rx_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/o_gtx_tx_p" type="logic">
+         <obj_property name="ElementShortName">o_gtx_tx_p</obj_property>
+         <obj_property name="ObjectShortName">o_gtx_tx_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/o_gtx_tx_n" type="logic">
+         <obj_property name="ElementShortName">o_gtx_tx_n</obj_property>
+         <obj_property name="ObjectShortName">o_gtx_tx_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/reset_n" type="logic">
+         <obj_property name="ElementShortName">reset_n</obj_property>
+         <obj_property name="ObjectShortName">reset_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/gtx_rst_n" type="logic">
+         <obj_property name="ElementShortName">gtx_rst_n</obj_property>
+         <obj_property name="ObjectShortName">gtx_rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/cgu_rst" type="logic">
+         <obj_property name="ElementShortName">cgu_rst</obj_property>
+         <obj_property name="ObjectShortName">cgu_rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/reset_from_clk_wiz" type="logic">
+         <obj_property name="ElementShortName">reset_from_clk_wiz</obj_property>
+         <obj_property name="ObjectShortName">reset_from_clk_wiz</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/dest_unit" type="array">
+         <obj_property name="ElementShortName">dest_unit[3:0]</obj_property>
+         <obj_property name="ObjectShortName">dest_unit[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/dest_unit_en" type="logic">
+         <obj_property name="ElementShortName">dest_unit_en</obj_property>
+         <obj_property name="ObjectShortName">dest_unit_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/dest_unit_tc" type="logic">
+         <obj_property name="ElementShortName">dest_unit_tc</obj_property>
+         <obj_property name="ObjectShortName">dest_unit_tc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sec_cnt" type="array">
+         <obj_property name="ElementShortName">sec_cnt[31:0]</obj_property>
+         <obj_property name="ObjectShortName">sec_cnt[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sec_cnt_en" type="logic">
+         <obj_property name="ElementShortName">sec_cnt_en</obj_property>
+         <obj_property name="ObjectShortName">sec_cnt_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sec_cnt_tc" type="logic">
+         <obj_property name="ElementShortName">sec_cnt_tc</obj_property>
+         <obj_property name="ObjectShortName">sec_cnt_tc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/tx_req" type="logic">
+         <obj_property name="ElementShortName">tx_req</obj_property>
+         <obj_property name="ObjectShortName">tx_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/tx_ack" type="logic">
+         <obj_property name="ElementShortName">tx_ack</obj_property>
+         <obj_property name="ObjectShortName">tx_ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/tx_data" type="array">
+         <obj_property name="ElementShortName">tx_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/tx_data_we" type="logic">
+         <obj_property name="ElementShortName">tx_data_we</obj_property>
+         <obj_property name="ObjectShortName">tx_data_we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/tx_paylod_size" type="array">
+         <obj_property name="ElementShortName">tx_paylod_size[7:0]</obj_property>
+         <obj_property name="ObjectShortName">tx_paylod_size[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_valid_d" type="logic">
+         <obj_property name="ElementShortName">rx_valid_d</obj_property>
+         <obj_property name="ObjectShortName">rx_valid_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_valid" type="logic">
+         <obj_property name="ElementShortName">rx_valid</obj_property>
+         <obj_property name="ObjectShortName">rx_valid</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_data" type="array">
+         <obj_property name="ElementShortName">rx_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_data[31:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_mem" type="array">
+         <obj_property name="ElementShortName">rx_mem[0:127][31:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_mem[0:127][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/msg_heder" type="array">
+         <obj_property name="ElementShortName">msg_heder[31:0]</obj_property>
+         <obj_property name="ObjectShortName">msg_heder[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/data_send_en" type="logic">
+         <obj_property name="ElementShortName">data_send_en</obj_property>
+         <obj_property name="ObjectShortName">data_send_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/send_data_pckt" type="array">
+         <obj_property name="ElementShortName">send_data_pckt[7:0]</obj_property>
+         <obj_property name="ObjectShortName">send_data_pckt[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sync_m2s_data_out" type="array">
+         <obj_property name="ElementShortName">sync_m2s_data_out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_m2s_data_out[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sync_a2a_data_out" type="array">
+         <obj_property name="ElementShortName">sync_a2a_data_out[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_a2a_data_out[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_lane_up" type="logic">
+         <obj_property name="ElementShortName">link_lane_up</obj_property>
+         <obj_property name="ObjectShortName">link_lane_up</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_lane_up_d" type="logic">
+         <obj_property name="ElementShortName">link_lane_up_d</obj_property>
+         <obj_property name="ObjectShortName">link_lane_up_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_lane_up_dd" type="logic">
+         <obj_property name="ElementShortName">link_lane_up_dd</obj_property>
+         <obj_property name="ObjectShortName">link_lane_up_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_channel_up" type="logic">
+         <obj_property name="ElementShortName">link_channel_up</obj_property>
+         <obj_property name="ObjectShortName">link_channel_up</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_channel_up_d" type="logic">
+         <obj_property name="ElementShortName">link_channel_up_d</obj_property>
+         <obj_property name="ObjectShortName">link_channel_up_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_channel_up_dd" type="logic">
+         <obj_property name="ElementShortName">link_channel_up_dd</obj_property>
+         <obj_property name="ObjectShortName">link_channel_up_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_hard_err" type="logic">
+         <obj_property name="ElementShortName">link_hard_err</obj_property>
+         <obj_property name="ObjectShortName">link_hard_err</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_hard_err_d" type="logic">
+         <obj_property name="ElementShortName">link_hard_err_d</obj_property>
+         <obj_property name="ObjectShortName">link_hard_err_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_hard_err_dd" type="logic">
+         <obj_property name="ElementShortName">link_hard_err_dd</obj_property>
+         <obj_property name="ObjectShortName">link_hard_err_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_soft_err" type="logic">
+         <obj_property name="ElementShortName">link_soft_err</obj_property>
+         <obj_property name="ObjectShortName">link_soft_err</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_soft_err_d" type="logic">
+         <obj_property name="ElementShortName">link_soft_err_d</obj_property>
+         <obj_property name="ObjectShortName">link_soft_err_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_soft_err_dd" type="logic">
+         <obj_property name="ElementShortName">link_soft_err_dd</obj_property>
+         <obj_property name="ObjectShortName">link_soft_err_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_frame_err" type="logic">
+         <obj_property name="ElementShortName">link_frame_err</obj_property>
+         <obj_property name="ObjectShortName">link_frame_err</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_frame_err_d" type="logic">
+         <obj_property name="ElementShortName">link_frame_err_d</obj_property>
+         <obj_property name="ObjectShortName">link_frame_err_d</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/link_frame_err_dd" type="logic">
+         <obj_property name="ElementShortName">link_frame_err_dd</obj_property>
+         <obj_property name="ObjectShortName">link_frame_err_dd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_fifo_full" type="logic">
+         <obj_property name="ElementShortName">rx_fifo_full</obj_property>
+         <obj_property name="ObjectShortName">rx_fifo_full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/tx_fifo_full" type="logic">
+         <obj_property name="ElementShortName">tx_fifo_full</obj_property>
+         <obj_property name="ObjectShortName">tx_fifo_full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/u0_ctrl_gtx_clk_p" type="logic">
+         <obj_property name="ElementShortName">u0_ctrl_gtx_clk_p</obj_property>
+         <obj_property name="ObjectShortName">u0_ctrl_gtx_clk_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/u0_ctrl_gtx_clk_n" type="logic">
+         <obj_property name="ElementShortName">u0_ctrl_gtx_clk_n</obj_property>
+         <obj_property name="ObjectShortName">u0_ctrl_gtx_clk_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/u0_ctrl_gtx_rx_p" type="logic">
+         <obj_property name="ElementShortName">u0_ctrl_gtx_rx_p</obj_property>
+         <obj_property name="ObjectShortName">u0_ctrl_gtx_rx_p</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/u0_ctrl_gtx_rx_n" type="logic">
+         <obj_property name="ElementShortName">u0_ctrl_gtx_rx_n</obj_property>
+         <obj_property name="ObjectShortName">u0_ctrl_gtx_rx_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/gtx_tx_p_buff" type="logic">
+         <obj_property name="ElementShortName">gtx_tx_p_buff</obj_property>
+         <obj_property name="ObjectShortName">gtx_tx_p_buff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/gtx_tx_n_buff" type="logic">
+         <obj_property name="ElementShortName">gtx_tx_n_buff</obj_property>
+         <obj_property name="ObjectShortName">gtx_tx_n_buff</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/data_gen" type="array">
+         <obj_property name="ElementShortName">data_gen[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_gen[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/data_gen_en" type="logic">
+         <obj_property name="ElementShortName">data_gen_en</obj_property>
+         <obj_property name="ObjectShortName">data_gen_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sync_a2a_data" type="array">
+         <obj_property name="ElementShortName">sync_a2a_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_a2a_data[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/unit_id" type="array">
+         <obj_property name="ElementShortName">unit_id[3:0]</obj_property>
+         <obj_property name="ObjectShortName">unit_id[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/hssl_ctrl_reset_n" type="logic">
+         <obj_property name="ElementShortName">hssl_ctrl_reset_n</obj_property>
+         <obj_property name="ObjectShortName">hssl_ctrl_reset_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/sync_m2s_data_in" type="array">
+         <obj_property name="ElementShortName">sync_m2s_data_in[15:0]</obj_property>
+         <obj_property name="ObjectShortName">sync_m2s_data_in[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/hssl_ctrl_debug_port" type="array">
+         <obj_property name="ElementShortName">hssl_ctrl_debug_port[20:0]</obj_property>
+         <obj_property name="ObjectShortName">hssl_ctrl_debug_port[20:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/fsm_state" type="other">
+         <obj_property name="ElementShortName">fsm_state</obj_property>
+         <obj_property name="ObjectShortName">fsm_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/loopback_fsm" type="other">
+         <obj_property name="ElementShortName">loopback_fsm</obj_property>
+         <obj_property name="ObjectShortName">loopback_fsm</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/cnt_rx" type="array">
+         <obj_property name="ElementShortName">cnt_rx[6:0]</obj_property>
+         <obj_property name="ObjectShortName">cnt_rx[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/cnt_tx" type="array">
+         <obj_property name="ElementShortName">cnt_tx[6:0]</obj_property>
+         <obj_property name="ObjectShortName">cnt_tx[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/cnt_tx_tc" type="logic">
+         <obj_property name="ElementShortName">cnt_tx_tc</obj_property>
+         <obj_property name="ObjectShortName">cnt_tx_tc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_valid_fe" type="logic">
+         <obj_property name="ElementShortName">rx_valid_fe</obj_property>
+         <obj_property name="ObjectShortName">rx_valid_fe</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_valid_re" type="logic">
+         <obj_property name="ElementShortName">rx_valid_re</obj_property>
+         <obj_property name="ObjectShortName">rx_valid_re</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/parsed_header" type="array">
+         <obj_property name="ElementShortName">parsed_header[31:0]</obj_property>
+         <obj_property name="ObjectShortName">parsed_header[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_payload_size" type="array">
+         <obj_property name="ElementShortName">rx_payload_size[7:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_payload_size[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/protocol_version" type="array">
+         <obj_property name="ElementShortName">protocol_version[7:0]</obj_property>
+         <obj_property name="ObjectShortName">protocol_version[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/unassigned_data" type="array">
+         <obj_property name="ElementShortName">unassigned_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">unassigned_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_src_id" type="array">
+         <obj_property name="ElementShortName">rx_src_id[3:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_src_id[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/rx_dst_id" type="array">
+         <obj_property name="ElementShortName">rx_dst_id[3:0]</obj_property>
+         <obj_property name="ObjectShortName">rx_dst_id[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/NO_OF_UNIT" type="other">
+         <obj_property name="ElementShortName">NO_OF_UNIT</obj_property>
+         <obj_property name="ObjectShortName">NO_OF_UNIT</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/ONE_SEC_TC" type="other">
+         <obj_property name="ElementShortName">ONE_SEC_TC</obj_property>
+         <obj_property name="ObjectShortName">ONE_SEC_TC</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/VAR_NUM_PER_LOOPBACK_STREAM" type="other">
+         <obj_property name="ElementShortName">VAR_NUM_PER_LOOPBACK_STREAM</obj_property>
+         <obj_property name="ObjectShortName">VAR_NUM_PER_LOOPBACK_STREAM</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/DATA_WIDTH" type="other">
+         <obj_property name="ElementShortName">DATA_WIDTH</obj_property>
+         <obj_property name="ObjectShortName">DATA_WIDTH</obj_property>
+      </wvobject>
+      <wvobject fp_name="/hssl_ctrl_test_loopback_tb/u1_hssl_ctrl_test_1l_loopback/RX_MEM_DEPTH" type="other">
+         <obj_property name="ElementShortName">RX_MEM_DEPTH</obj_property>
+         <obj_property name="ObjectShortName">RX_MEM_DEPTH</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
