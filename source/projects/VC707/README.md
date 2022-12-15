@@ -1,9 +1,6 @@
 # Documentation
 * Technical details
 
-# Documentation
-* Technical details
-
   When you connect two boards together, according to vc707 documentation, J6 must be connected in order for SFP to work. By default it is not.
 
   To recreate project, navigate to source/projects/VC707/hssl_ctrl_test_loopback/ and open hssl_ctrl_test_loopback.xpr with Vivado 2019.1. Generate bitstream and boot it on the vc707 board. After bitstream is ready, there is an option to put it into flash memory(mt28gu01gaax1e-bpi-x16) of vc707 if desired.
