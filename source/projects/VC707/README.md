@@ -10,7 +10,7 @@
 
   Hardware Manager -> Add Configuration Memory Device -> Program Configuration Memory Device. Your flash should take about 2 minutes to set and you are ready to go. Don't forget to remove jtag cable if you want to boot from flash memory!
 
-  * Description
+* Description
 
   <b>hssl_ctrl_test_1l_loopback: </b> In case of loopback, transmission(RX -> TX) starts when last data in stream is received. Received data is also written to the local RAM. 
 
