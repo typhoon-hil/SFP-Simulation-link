@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="hssl_ctrl_fifo_1x_synth_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1671104719">
+  <File Type="PA-TCL" Name="hssl_ctrl_fifo_1x.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="hssl_ctrl_fifo_1x_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="hssl_ctrl_fifo_1x_reports.tcl"/>
+  <File Type="RDS-RDS" Name="hssl_ctrl_fifo_1x.vds"/>
+  <File Type="RDS-UTIL" Name="hssl_ctrl_fifo_1x_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="hssl_ctrl_fifo_1x_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="hssl_ctrl_fifo_1x.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="hssl_ctrl_fifo_1x_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="hssl_ctrl_fifo_1x_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hssl_ctrl_fifo_1x">
+    <File Path="$PPRDIR/../../../hdl/vhdl/VC707/coregen/ip/hssl_ctrl_fifo_1x/hssl_ctrl_fifo_1x.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="hssl_ctrl_fifo_1x"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hssl_ctrl_fifo_1x">
+    <File Path="$PPRDIR/../../../hdl/vhdl/VC707/coregen/ip/hssl_ctrl_fifo_1x/hssl_ctrl_fifo_1x.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="hssl_ctrl_fifo_1x"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

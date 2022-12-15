@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7vx485tffg1761-2" LaunchTime="1671104733">
+  <File Type="PA-TCL" Name="hssl_ctrl_test_1l_loopback.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="hssl_ctrl_test_1l_loopback_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="hssl_ctrl_test_1l_loopback_reports.tcl"/>
+  <File Type="RDS-RDS" Name="hssl_ctrl_test_1l_loopback.vds"/>
+  <File Type="RDS-UTIL" Name="hssl_ctrl_test_1l_loopback_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="hssl_ctrl_test_1l_loopback_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="hssl_ctrl_test_1l_loopback.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="hssl_ctrl_test_1l_loopback_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="hssl_ctrl_test_1l_loopback_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../../hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../hdl/vhdl/VC707/coregen/ip/aurora/aurora_clock_module.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../hdl/vhdl/common/hssl_ctrl_test/rtl/aurora_comp_dec_1l.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../hdl/vhdl/VC707/coregen/ip/aurora/aurora_gt_common_wrapper.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../hdl/vhdl/VC707/coregen/ip/aurora/aurora_support.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../hdl/vhdl/VC707/coregen/ip/aurora/aurora_support_reset_logic.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../hdl/vhdl/VC707/coregen/ip/aurora/aurora_wrapper_1l.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../hdl/vhdl/common/misc/hil_lib.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_comp_dec.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_comp_dec_1l.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../hdl/vhdl/VC707/coregen/ip/my_vio/my_vio.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="hssl_ctrl_test_1l_loopback"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PPRDIR/../../../hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PPRDIR/../../../hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="aurora"/>
+  <BlockFileSet Type="BlockSrcs" Name="hssl_ctrl_fifo_1x"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz"/>
+</GenRun>

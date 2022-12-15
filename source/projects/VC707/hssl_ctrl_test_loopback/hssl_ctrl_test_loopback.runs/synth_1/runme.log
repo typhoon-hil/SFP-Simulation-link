@@ -1,0 +1,607 @@
+
+*** Running vivado
+    with args -log hssl_ctrl_test_1l_loopback.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source hssl_ctrl_test_1l_loopback.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source hssl_ctrl_test_1l_loopback.tcl -notrace
+Command: synth_design -top hssl_ctrl_test_1l_loopback -part xc7vx485tffg1761-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-1540] The version limit for your license is '2019.12' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+INFO: [Device 21-403] Loading part xc7vx485tffg1761-2
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 33604 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 912.355 ; gain = 176.723
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'hssl_ctrl_test_1l_loopback' [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:42]
+	Parameter NO_OF_UNIT bound to: 3 - type: integer 
+	Parameter ONE_SEC_TC bound to: 200000000 - type: integer 
+	Parameter VAR_NUM_PER_LOOPBACK_STREAM bound to: 128 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:62]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:63]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:64]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:67]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:69]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:110]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:128]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:131]
+INFO: [Synth 8-3491] module 'clk_wiz' declared at 'd:/work/SFP-Simulation-link/source/projects/VC707/hssl_ctrl_test_loopback/hssl_ctrl_test_loopback.runs/synth_1/.Xil/Vivado-32000-DraganT/realtime/clk_wiz_stub.v:5' bound to instance 'clk_wiz_u0' of component 'clk_wiz' [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:289]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz' [d:/work/SFP-Simulation-link/source/projects/VC707/hssl_ctrl_test_loopback/hssl_ctrl_test_loopback.runs/synth_1/.Xil/Vivado-32000-DraganT/realtime/clk_wiz_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz' (1#1) [d:/work/SFP-Simulation-link/source/projects/VC707/hssl_ctrl_test_loopback/hssl_ctrl_test_loopback.runs/synth_1/.Xil/Vivado-32000-DraganT/realtime/clk_wiz_stub.v:5]
+	Parameter DEVICE_ID_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'hssl_ctrl_1l' declared at 'd:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:9' bound to instance 'hssl_ctrl_u0' of component 'hssl_ctrl_1l' [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:303]
+INFO: [Synth 8-638] synthesizing module 'hssl_ctrl_1l' [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:57]
+	Parameter DEVICE_ID_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:78]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:80]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:81]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:84]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:86]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:87]
+INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:123]
+INFO: [Synth 8-3491] module 'hssl_ctrl_fifo_1x' declared at 'd:/work/SFP-Simulation-link/source/projects/VC707/hssl_ctrl_test_loopback/hssl_ctrl_test_loopback.runs/synth_1/.Xil/Vivado-32000-DraganT/realtime/hssl_ctrl_fifo_1x_stub.v:6' bound to instance 'u_hssl_ctrl_fifo_rx' of component 'hssl_ctrl_fifo_1x' [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:684]
+INFO: [Synth 8-6157] synthesizing module 'hssl_ctrl_fifo_1x' [d:/work/SFP-Simulation-link/source/projects/VC707/hssl_ctrl_test_loopback/hssl_ctrl_test_loopback.runs/synth_1/.Xil/Vivado-32000-DraganT/realtime/hssl_ctrl_fifo_1x_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'hssl_ctrl_fifo_1x' (2#1) [d:/work/SFP-Simulation-link/source/projects/VC707/hssl_ctrl_test_loopback/hssl_ctrl_test_loopback.runs/synth_1/.Xil/Vivado-32000-DraganT/realtime/hssl_ctrl_fifo_1x_stub.v:6]
+INFO: [Synth 8-3491] module 'hssl_ctrl_fifo_1x' declared at 'd:/work/SFP-Simulation-link/source/projects/VC707/hssl_ctrl_test_loopback/hssl_ctrl_test_loopback.runs/synth_1/.Xil/Vivado-32000-DraganT/realtime/hssl_ctrl_fifo_1x_stub.v:6' bound to instance 'u_hssl_ctrl_fifo_tx' of component 'hssl_ctrl_fifo_1x' [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:700]
+INFO: [Synth 8-3491] module 'aurora_wrapper_1l' declared at 'd:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_wrapper_1l.vhd:9' bound to instance 'u_aurora_wrapper' of component 'aurora_wrapper_1l' [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:716]
+INFO: [Synth 8-638] synthesizing module 'aurora_wrapper_1l' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_wrapper_1l.vhd:56]
+INFO: [Synth 8-3491] module 'aurora_support' declared at 'd:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_support.vhd:61' bound to instance 'aurora_1l_support_i' of component 'aurora_support' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_wrapper_1l.vhd:163]
+INFO: [Synth 8-638] synthesizing module 'aurora_support' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_support.vhd:150]
+INFO: [Synth 8-3491] module 'IBUFDS_GTE2' declared at 'C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:33009' bound to instance 'IBUFDS_GTE2_CLK1' of component 'IBUFDS_GTE2' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_support.vhd:374]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE2' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:33009]
+	Parameter CLKCM_CFG bound to: TRUE - type: string 
+	Parameter CLKRCV_TRST bound to: TRUE - type: string 
+	Parameter CLKSWING_CFG bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE2' (3#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:33009]
+INFO: [Synth 8-3491] module 'aurora_CLOCK_MODULE' declared at 'd:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_clock_module.vhd:69' bound to instance 'clock_module_i' of component 'aurora_CLOCK_MODULE' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_support.vhd:387]
+INFO: [Synth 8-638] synthesizing module 'aurora_CLOCK_MODULE' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_clock_module.vhd:85]
+INFO: [Synth 8-3491] module 'BUFG' declared at 'C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075' bound to instance 'user_clk_buf_i' of component 'BUFG' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_clock_module.vhd:125]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (4#1) [C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075]
+INFO: [Synth 8-3491] module 'BUFG' declared at 'C:/Xilinx/Vivado/2019.1/scripts/rt/data/unisim_comp.v:1075' bound to instance 'init_clk_buf_i' of component 'BUFG' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_clock_module.vhd:140]
+INFO: [Synth 8-256] done synthesizing module 'aurora_CLOCK_MODULE' (5#1) [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_clock_module.vhd:85]
+INFO: [Synth 8-3491] module 'aurora_SUPPORT_RESET_LOGIC' declared at 'd:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_support_reset_logic.vhd:68' bound to instance 'support_reset_logic_i' of component 'aurora_SUPPORT_RESET_LOGIC' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_support.vhd:412]
+INFO: [Synth 8-638] synthesizing module 'aurora_SUPPORT_RESET_LOGIC' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_support_reset_logic.vhd:81]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_support_reset_logic.vhd:94]
+	Parameter C_CDC_TYPE bound to: 1 - type: integer 
+	Parameter C_RESET_STATE bound to: 0 - type: integer 
+	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
+	Parameter C_FLOP_INPUT bound to: 1 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
+	Parameter C_MTBF_STAGES bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'aurora_cdc_sync_exdes' declared at 'd:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:111' bound to instance 'gt_rst_r_cdc_sync' of component 'aurora_cdc_sync_exdes' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_support_reset_logic.vhd:155]
+INFO: [Synth 8-638] synthesizing module 'aurora_cdc_sync_exdes' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:153]
+	Parameter C_CDC_TYPE bound to: 1 - type: integer 
+	Parameter C_RESET_STATE bound to: 0 - type: integer 
+	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
+	Parameter C_FLOP_INPUT bound to: 1 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
+	Parameter C_MTBF_STAGES bound to: 3 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* keep = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:300]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:302]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:303]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:304]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:305]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:306]
+INFO: [Synth 8-5534] Detected attribute (* async_reg = "true" *) [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:307]
+WARNING: [Synth 8-6014] Unused sequential element GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.s_level_out_d4_reg was removed.  [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:378]
+WARNING: [Synth 8-6014] Unused sequential element GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.s_level_out_d5_reg was removed.  [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:379]
+WARNING: [Synth 8-6014] Unused sequential element GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.s_level_out_d6_reg was removed.  [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:380]
+WARNING: [Synth 8-3848] Net prmry_ack in module/entity aurora_cdc_sync_exdes does not have driver. [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:135]
+WARNING: [Synth 8-3848] Net scndry_vect_out in module/entity aurora_cdc_sync_exdes does not have driver. [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'aurora_cdc_sync_exdes' (6#1) [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_cdc_sync_exdes.vhd:153]
+INFO: [Synth 8-256] done synthesizing module 'aurora_SUPPORT_RESET_LOGIC' (7#1) [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_support_reset_logic.vhd:81]
+INFO: [Synth 8-3491] module 'aurora_gt_common_wrapper' declared at 'd:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_gt_common_wrapper.vhd:61' bound to instance 'gt_common_support' of component 'aurora_gt_common_wrapper' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_support.vhd:423]
+INFO: [Synth 8-638] synthesizing module 'aurora_gt_common_wrapper' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_gt_common_wrapper.vhd:84]
+	Parameter WRAPPER_SIM_GTRESET_SPEEDUP bound to: FALSE - type: string 
+	Parameter BIAS_CFG bound to: 64'b0000000000000000000001000000000000000000000000000001000000000000 
+	Parameter COMMON_CFG bound to: 32'b00000000000000000000000000000000 
+	Parameter IS_DRPCLK_INVERTED bound to: 1'b0 
+	Parameter IS_GTGREFCLK_INVERTED bound to: 1'b0 
+	Parameter IS_QPLLLOCKDETCLK_INVERTED bound to: 1'b0 
+	Parameter QPLL_CFG bound to: 28'b0000011010000000000111000001 
+	Parameter QPLL_CLKOUT_CFG bound to: 4'b0000 
+	Parameter QPLL_COARSE_FREQ_OVRD bound to: 6'b010000 
+	Parameter QPLL_COARSE_FREQ_OVRD_EN bound to: 1'b0 
+	Parameter QPLL_CP bound to: 10'b0000011111 
+	Parameter QPLL_CP_MONITOR_EN bound to: 1'b0 
+	Parameter QPLL_DMONITOR_SEL bound to: 1'b0 
+	Parameter QPLL_FBDIV bound to: 10'b0010000000 
+	Parameter QPLL_FBDIV_MONITOR_EN bound to: 1'b0 
+	Parameter QPLL_FBDIV_RATIO bound to: 1'b1 
+	Parameter QPLL_INIT_CFG bound to: 24'b000000000000000000000110 
+	Parameter QPLL_LOCK_CFG bound to: 16'b0010000111101000 
+	Parameter QPLL_LPF bound to: 4'b1111 
+	Parameter QPLL_REFCLK_DIV bound to: 1 - type: integer 
+	Parameter SIM_QPLLREFCLK_SEL bound to: 3'b001 
+	Parameter SIM_RESET_SPEEDUP bound to: FALSE - type: string 
+	Parameter SIM_VERSION bound to: 4.0 - type: string 
+INFO: [Synth 8-113] binding component instance 'gtxe2_common_i' to cell 'GTXE2_COMMON' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_gt_common_wrapper.vhd:155]
+INFO: [Synth 8-256] done synthesizing module 'aurora_gt_common_wrapper' (8#1) [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_gt_common_wrapper.vhd:84]
+INFO: [Synth 8-3491] module 'aurora' declared at 'd:/work/SFP-Simulation-link/source/projects/VC707/hssl_ctrl_test_loopback/hssl_ctrl_test_loopback.runs/synth_1/.Xil/Vivado-32000-DraganT/realtime/aurora_stub.v:5' bound to instance 'aurora_i' of component 'aurora' [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_support.vhd:444]
+INFO: [Synth 8-6157] synthesizing module 'aurora' [d:/work/SFP-Simulation-link/source/projects/VC707/hssl_ctrl_test_loopback/hssl_ctrl_test_loopback.runs/synth_1/.Xil/Vivado-32000-DraganT/realtime/aurora_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'aurora' (9#1) [d:/work/SFP-Simulation-link/source/projects/VC707/hssl_ctrl_test_loopback/hssl_ctrl_test_loopback.runs/synth_1/.Xil/Vivado-32000-DraganT/realtime/aurora_stub.v:5]
+INFO: [Synth 8-256] done synthesizing module 'aurora_support' (10#1) [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_support.vhd:150]
+INFO: [Synth 8-256] done synthesizing module 'aurora_wrapper_1l' (11#1) [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora_wrapper_1l.vhd:56]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_aurora_wrapper'. This will prevent further optimization [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:716]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_hssl_ctrl_fifo_rx'. This will prevent further optimization [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:684]
+INFO: [Synth 8-256] done synthesizing module 'hssl_ctrl_1l' (12#1) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_1l.vhd:57]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'hssl_ctrl_u0'. This will prevent further optimization [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:303]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'clk_wiz_u0'. This will prevent further optimization [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:289]
+WARNING: [Synth 8-6014] Unused sequential element data_gen_reg was removed.  [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:179]
+WARNING: [Synth 8-6014] Unused sequential element send_data_pckt_reg was removed.  [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:192]
+WARNING: [Synth 8-6014] Unused sequential element dest_unit_reg was removed.  [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:207]
+WARNING: [Synth 8-6014] Unused sequential element sec_cnt_reg was removed.  [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:225]
+WARNING: [Synth 8-6014] Unused sequential element fsm_state_reg was removed.  [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:243]
+WARNING: [Synth 8-6014] Unused sequential element msg_heder_reg was removed.  [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:281]
+INFO: [Synth 8-256] done synthesizing module 'hssl_ctrl_test_1l_loopback' (13#1) [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/rtl/hssl_ctrl_test_1l_loopback.vhd:42]
+WARNING: [Synth 8-3917] design hssl_ctrl_test_1l_loopback has port sfp_tx_disable_o driven by constant 0
+WARNING: [Synth 8-3331] design aurora_cdc_sync_exdes has unconnected port prmry_ack
+WARNING: [Synth 8-3331] design aurora_cdc_sync_exdes has unconnected port scndry_vect_out[1]
+WARNING: [Synth 8-3331] design aurora_cdc_sync_exdes has unconnected port scndry_vect_out[0]
+WARNING: [Synth 8-3331] design aurora_cdc_sync_exdes has unconnected port prmry_resetn
+WARNING: [Synth 8-3331] design aurora_cdc_sync_exdes has unconnected port prmry_vect_in[1]
+WARNING: [Synth 8-3331] design aurora_cdc_sync_exdes has unconnected port prmry_vect_in[0]
+WARNING: [Synth 8-3331] design aurora_cdc_sync_exdes has unconnected port scndry_resetn
+WARNING: [Synth 8-3331] design aurora_wrapper_1l has unconnected port o_debug_port[2]
+WARNING: [Synth 8-3331] design aurora_wrapper_1l has unconnected port i_gtx_rst_n
+WARNING: [Synth 8-3331] design hssl_ctrl_test_1l_loopback has unconnected port i_reset
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 979.906 ; gain = 244.273
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 979.906 ; gain = 244.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 979.906 ; gain = 244.273
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora/aurora_in_context.xdc] for cell 'hssl_ctrl_u0/u_aurora_wrapper/aurora_1l_support_i/aurora_i'
+Finished Parsing XDC File [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/aurora/aurora/aurora_in_context.xdc] for cell 'hssl_ctrl_u0/u_aurora_wrapper/aurora_1l_support_i/aurora_i'
+Parsing XDC File [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/hssl_ctrl_fifo_1x/hssl_ctrl_fifo_1x/hssl_ctrl_fifo_1x_in_context.xdc] for cell 'hssl_ctrl_u0/u_hssl_ctrl_fifo_rx'
+Finished Parsing XDC File [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/hssl_ctrl_fifo_1x/hssl_ctrl_fifo_1x/hssl_ctrl_fifo_1x_in_context.xdc] for cell 'hssl_ctrl_u0/u_hssl_ctrl_fifo_rx'
+Parsing XDC File [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/hssl_ctrl_fifo_1x/hssl_ctrl_fifo_1x/hssl_ctrl_fifo_1x_in_context.xdc] for cell 'hssl_ctrl_u0/u_hssl_ctrl_fifo_tx'
+Finished Parsing XDC File [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/hssl_ctrl_fifo_1x/hssl_ctrl_fifo_1x/hssl_ctrl_fifo_1x_in_context.xdc] for cell 'hssl_ctrl_u0/u_hssl_ctrl_fifo_tx'
+Parsing XDC File [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc] for cell 'clk_wiz_u0'
+Finished Parsing XDC File [d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc] for cell 'clk_wiz_u0'
+Parsing XDC File [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc]
+WARNING: [Vivado 12-508] No pins matched 'get_pins -hier -filter name=~*TXOUTCLK'. [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc:7]
+WARNING: [Vivado 12-627] No clocks matched 'hssl_clk'. [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc:8]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc:8]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out1_clk_wiz'. [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc:8]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc:8]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks hssl_clk]'. [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc:8]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_out1_clk_wiz]'. [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc:8]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-627] No clocks matched 'clk_out1_clk_wiz'. [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc:9]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc:9]
+WARNING: [Vivado 12-627] No clocks matched 'hssl_clk'. [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc:9]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc:9]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_out1_clk_wiz]'. [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc:9]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks hssl_clk]'. [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc:9]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/hssl_ctrl_test_1l_loopback_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/work/SFP-Simulation-link/source/hdl/vhdl/common/hssl_ctrl_test/constraints/vc707/vc707_aurora.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hssl_ctrl_test_1l_loopback_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/hssl_ctrl_test_1l_loopback_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1137.480 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1137.480 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'hssl_ctrl_u0/u_hssl_ctrl_fifo_rx' at clock pin 'wr_clk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'hssl_ctrl_u0/u_hssl_ctrl_fifo_tx' at clock pin 'rd_clk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for i_clk_n. (constraint file  d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for i_clk_n. (constraint file  d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for i_clk_p. (constraint file  d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for i_clk_p. (constraint file  d:/work/SFP-Simulation-link/source/hdl/vhdl/VC707/coregen/ip/clk_wiz/clk_wiz/clk_wiz_in_context.xdc, line 6).
+Applied set_property DONT_TOUCH = true for hssl_ctrl_u0/u_aurora_wrapper/aurora_1l_support_i/aurora_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for hssl_ctrl_u0/u_hssl_ctrl_fifo_rx. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for hssl_ctrl_u0/u_hssl_ctrl_fifo_tx. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for clk_wiz_u0. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'rx_fsm_state_reg' in module 'hssl_ctrl_1l'
+INFO: [Synth 8-802] inferred FSM for state register 'tx_fsm_state_reg' in module 'hssl_ctrl_1l'
+INFO: [Synth 8-802] inferred FSM for state register 'sync_fsm_state_reg' in module 'hssl_ctrl_1l'
+INFO: [Synth 8-802] inferred FSM for state register 'loopback_fsm_reg' in module 'hssl_ctrl_test_1l_loopback'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+      rx_wait_for_header |                           000010 |                              000
+         rx_parse_header |                           100000 |                              001
+        rx_wait_for_data |                           010000 |                              010
+            rx_rcv_frame |                           001000 |                              100
+           rx_term_frame |                           000100 |                              011
+         rx_bypass_frame |                           000001 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rx_fsm_state_reg' using encoding 'one-hot' in module 'hssl_ctrl_1l'
+INFO: [Synth 8-6159] Found Keep on FSM register 'tx_fsm_state_reg' in module 'hssl_ctrl_1l', re-encoding will not be performed
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                 tx_idle |                               00 |                               00
+                 tx_send |                               01 |                               01
+               tx_bypass |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               sync_idle |                              000 |                              000
+         sync_m2s_bypass |                              001 |                              011
+         sync_a2a_bypass |                              010 |                              110
+        sync_m2s_snd_req |                              011 |                              001
+       sync_m2s_snd_data |                              100 |                              010
+        sync_a2a_snd_req |                              101 |                              100
+       sync_a2a_snd_data |                              110 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sync_fsm_state_reg' using encoding 'sequential' in module 'hssl_ctrl_1l'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                 get_hdr |                              001 |                              001
+               lookup_id |                              010 |                              010
+    start_sending_tx_req |                              011 |                              011
+             send_header |                              100 |                              100
+          send_data_back |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'loopback_fsm_reg' using encoding 'sequential' in module 'hssl_ctrl_test_1l_loopback'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 4     
+	   2 Input      7 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 130   
+	               16 Bit    Registers := 14    
+	                8 Bit    Registers := 5     
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
+	                1 Bit    Registers := 35    
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 4     
+	   6 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 149   
+	   6 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module hssl_ctrl_test_1l_loopback 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      7 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 128   
+	                8 Bit    Registers := 3     
+	                7 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 2     
+	   6 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 134   
+	   6 Input      1 Bit        Muxes := 1     
+Module aurora_cdc_sync_exdes 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 4     
+Module aurora_SUPPORT_RESET_LOGIC 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
+Module aurora_wrapper_1l 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 7     
+Module hssl_ctrl_1l 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 14    
+	                8 Bit    Registers := 2     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   6 Input      6 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 15    
+	   6 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design hssl_ctrl_test_1l_loopback has port sfp_tx_disable_o driven by constant 0
+WARNING: [Synth 8-3331] design aurora_wrapper_1l has unconnected port o_debug_port[2]
+WARNING: [Synth 8-3331] design aurora_wrapper_1l has unconnected port i_gtx_rst_n
+WARNING: [Synth 8-3331] design hssl_ctrl_test_1l_loopback has unconnected port i_reset
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5578] Moved timing constraint from pin 'hssl_ctrl_u0/u_aurora_wrapper/aurora_1l_support_i/aurora_i/tx_out_clk' to pin 'hssl_ctrl_u0/u_aurora_wrapper/aurora_1l_support_i/aurora_i/bbstub_tx_out_clk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'clk_wiz_u0/clk_out1' to pin 'clk_wiz_u0/bbstub_clk_out1/O'
+INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name       | RTL Name             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|aurora_wrapper_1l | gtx_rst_n_dddddd_reg | 7      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------------+----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------+----------+
+|      |BlackBox name     |Instances |
++------+------------------+----------+
+|1     |aurora            |         1|
+|2     |hssl_ctrl_fifo_1x |         2|
+|3     |clk_wiz           |         1|
++------+------------------+----------+
+
+Report Cell Usage: 
++------+---------------------+------+
+|      |Cell                 |Count |
++------+---------------------+------+
+|1     |aurora               |     1|
+|2     |clk_wiz              |     1|
+|3     |hssl_ctrl_fifo_1x    |     1|
+|4     |hssl_ctrl_fifo_1x__2 |     1|
+|5     |BUFG                 |     2|
+|6     |CARRY4               |     6|
+|7     |GTXE2_COMMON         |     1|
+|8     |IBUFDS_GTE2          |     1|
+|9     |LUT1                 |     6|
+|10    |LUT2                 |    62|
+|11    |LUT3                 |    66|
+|12    |LUT4                 |    61|
+|13    |LUT5                 |    79|
+|14    |LUT6                 |  1276|
+|15    |MUXF7                |   512|
+|16    |MUXF8                |   256|
+|17    |SRL16E               |     1|
+|18    |FDCE                 |  4170|
+|19    |FDPE                 |     4|
+|20    |FDRE                 |   330|
+|21    |FDSE                 |     1|
+|22    |IBUF                 |    12|
+|23    |OBUF                 |    10|
++------+---------------------+------+
+
+Report Instance Areas: 
++------+------------------------------+---------------------------+------+
+|      |Instance                      |Module                     |Cells |
++------+------------------------------+---------------------------+------+
+|1     |top                           |                           |  7079|
+|2     |  hssl_ctrl_u0                |hssl_ctrl_1l               |   748|
+|3     |    u_aurora_wrapper          |aurora_wrapper_1l          |   134|
+|4     |      aurora_1l_support_i     |aurora_support             |   132|
+|5     |        clock_module_i        |aurora_CLOCK_MODULE        |     2|
+|6     |        gt_common_support     |aurora_gt_common_wrapper   |     1|
+|7     |        support_reset_logic_i |aurora_SUPPORT_RESET_LOGIC |    18|
+|8     |          gt_rst_r_cdc_sync   |aurora_cdc_sync_exdes      |     5|
++------+------------------------------+---------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1137.500 ; gain = 401.867
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1137.500 ; gain = 244.273
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1137.500 ; gain = 401.867
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 774 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'hssl_ctrl_test_1l_loopback' is not ideal for floorplanning, since the cellview 'hssl_ctrl_test_1l_loopback' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1157.289 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+96 Infos, 35 Warnings, 4 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1157.289 ; gain = 841.648
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1157.289 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'd:/work/SFP-Simulation-link/source/projects/VC707/hssl_ctrl_test_loopback/hssl_ctrl_test_loopback.runs/synth_1/hssl_ctrl_test_1l_loopback.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file hssl_ctrl_test_1l_loopback_utilization_synth.rpt -pb hssl_ctrl_test_1l_loopback_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 15 12:48:40 2022...

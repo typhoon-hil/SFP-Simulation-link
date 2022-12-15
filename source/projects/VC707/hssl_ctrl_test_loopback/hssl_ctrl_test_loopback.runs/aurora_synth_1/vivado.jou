@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Dec 15 12:45:22 2022
+# Process ID: 25996
+# Current directory: d:/work/SFP-Simulation-link/source/projects/VC707/hssl_ctrl_test_loopback/hssl_ctrl_test_loopback.runs/aurora_synth_1
+# Command line: vivado.exe -log aurora.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source aurora.tcl
+# Log file: d:/work/SFP-Simulation-link/source/projects/VC707/hssl_ctrl_test_loopback/hssl_ctrl_test_loopback.runs/aurora_synth_1/aurora.vds
+# Journal file: d:/work/SFP-Simulation-link/source/projects/VC707/hssl_ctrl_test_loopback/hssl_ctrl_test_loopback.runs/aurora_synth_1\vivado.jou
+#-----------------------------------------------------------
+source aurora.tcl -notrace
