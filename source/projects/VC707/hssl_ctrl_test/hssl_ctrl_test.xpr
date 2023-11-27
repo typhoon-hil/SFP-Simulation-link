@@ -189,8 +189,8 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="hssl_ctrl_fifo_1x" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hssl_ctrl_fifo_1x">
-      <File Path="$PPRDIR/../../../hdl/vhdl/VC707/coregen/ip/hssl_ctrl_fifo_1x/hssl_ctrl_fifo_1x.xci">
+    <FileSet Name="hssl_ctrl_axis_fifo" Type="BlockSrcs" RelSrcDir="$PSRCDIR/hssl_ctrl_axis_fifo">
+      <File Path="$PPRDIR/../../../hdl/vhdl/VC707/coregen/ip/hssl_ctrl_axis_fifo/hssl_ctrl_axis_fifo.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -198,7 +198,7 @@
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TopModule" Val="hssl_ctrl_fifo_1x"/>
+        <Option Name="TopModule" Val="hssl_ctrl_axis_fifo"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -270,7 +270,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="hssl_ctrl_fifo_1x_synth_1" Type="Ft3:Synth" SrcSet="hssl_ctrl_fifo_1x" Part="xc7vx485tffg1761-2" ConstrsSet="hssl_ctrl_fifo_1x" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hssl_ctrl_fifo_1x_synth_1" IncludeInArchive="true">
+    <Run Id="hssl_ctrl_axis_fifo_synth_1" Type="Ft3:Synth" SrcSet="hssl_ctrl_axis_fifo" Part="xc7vx485tffg1761-2" ConstrsSet="hssl_ctrl_axis_fifo" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/hssl_ctrl_axis_fifo_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -323,7 +323,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="hssl_ctrl_fifo_1x_impl_1" Type="Ft2:EntireDesign" Part="xc7vx485tffg1761-2" ConstrsSet="hssl_ctrl_fifo_1x" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hssl_ctrl_fifo_1x_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="hssl_ctrl_axis_fifo_impl_1" Type="Ft2:EntireDesign" Part="xc7vx485tffg1761-2" ConstrsSet="hssl_ctrl_axis_fifo" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="hssl_ctrl_axis_fifo_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>

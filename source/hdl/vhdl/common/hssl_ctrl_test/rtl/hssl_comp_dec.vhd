@@ -17,19 +17,20 @@ use work.hil_lib.all;
 
 package hssl_comp_dec is
 
-  component hssl_ctrl_fifo_1x
+  component hssl_ctrl_axis_fifo
   port (
-    wr_clk        : in  std_logic;
-    rd_clk        : in  std_logic;
-    rst           : in  std_logic;
-    din           : in  std_logic_vector(31 downto 0);
-    wr_en         : in  std_logic;
-    rd_en         : in  std_logic;
-    dout          : out std_logic_vector(31 downto 0);
-    full          : out std_logic;
-    empty         : out std_logic;
-    rd_data_count : out std_logic_vector(10 downto 0);
-    wr_data_count : out std_logic_vector(10 downto 0)
+    m_aclk         : in  std_logic;
+    s_aclk         : in  std_logic;
+    s_aresetn      : in  std_logic;
+    s_axis_tvalid  : in  std_logic;
+    s_axis_tready  : out std_logic;
+    s_axis_tdata   : in  std_logic_vector(31 downto 0);
+    s_axis_tlast   : in  std_logic;
+    m_axis_tvalid  : out std_logic;
+    m_axis_tready  : in  std_logic;
+    m_axis_tdata   : out std_logic_vector(31 downto 0);
+    m_axis_tlast   : out std_logic;
+    axis_prog_full : out std_logic
   );
   end component;
 

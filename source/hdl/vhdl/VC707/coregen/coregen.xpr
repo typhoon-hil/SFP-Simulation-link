@@ -68,7 +68,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/ip/hssl_ctrl_fifo_1x/hssl_ctrl_fifo_1x.xci">
+      <File Path="$PPRDIR/ip/hssl_ctrl_axis_fifo/hssl_ctrl_axis_fifo.xci">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -76,7 +76,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/ip/my_vio/my_vio.xci">
+      <File Path="$PPRDIR/ip/my_vio/my_vio.xci">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -123,7 +123,7 @@
       </Config>
     </FileSet>
     <FileSet Name="clk_wiz" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_wiz">
-      <File Path="$PSRCDIR/sources_1/ip/clk_wiz/clk_wiz.xci">
+      <File Path="$PPRDIR/ip/clk_wiz/clk_wiz.xci">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>

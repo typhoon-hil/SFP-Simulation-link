@@ -24,6 +24,10 @@ set_property PACKAGE_PIN BB31 [get_ports {i_sw[0]}]
 set_property PACKAGE_PIN BA30 [get_ports {i_sw[1]}]
 set_property PACKAGE_PIN AY30 [get_ports {i_sw[2]}]
 set_property PACKAGE_PIN AW30 [get_ports {i_sw[3]}]
+# header control
+set_property PACKAGE_PIN BA21 [get_ports i_disable_header]
+set_property IOSTANDARD LVCMOS18 [get_ports i_disable_header]
+set_property PULLDOWN TRUE [get_ports i_disable_header]
 # 125.0MHz GT Reference clock constraint
 create_clock -period 8.000 -name GT_REFCLK1 [get_ports i_gtx_clk_p]
 set_property PACKAGE_PIN AH8 [get_ports i_gtx_clk_p]

@@ -74,7 +74,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../../hdl/vhdl/VC707/coregen/ip/hssl_ctrl_fifo_1x/hssl_ctrl_fifo_1x.xci">
+      <File Path="$PPRDIR/../../../hdl/vhdl/VC707/coregen/ip/hssl_ctrl_axis_fifo/hssl_ctrl_axis_fifo.xci">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

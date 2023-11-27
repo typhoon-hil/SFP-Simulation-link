@@ -59,6 +59,8 @@ architecture rtl of hssl_ctrl_test_loopback_tb is
   signal u1_switch_input          : std_logic_vector(3 downto 0);
   signal u1_sfp_tx_disable_output : std_logic;
   
+  signal disable_header           : std_logic := '0';
+  
 begin
 
   gtx_clk_process : process
@@ -89,8 +91,9 @@ begin
   port map(
     i_clk_p          => clk0,
     i_clk_n          => clk0_n,
-    i_reset        => u0_reset,
+    i_reset          => u0_reset,
     -- User IO
+    i_disable_header => disable_header,
     i_unit_id        => u0_unit_id,
     o_led            => u0_led_output,
     i_sw             => u0_switch_input,  
@@ -120,6 +123,7 @@ begin
     i_clk_n          => clk0_n,
     i_reset          => u1_reset,
     -- User IO
+    i_disable_header => '1',
     i_unit_id        => u1_unit_id,
     o_led            => u1_led_output,
     i_sw             => u1_switch_input, 

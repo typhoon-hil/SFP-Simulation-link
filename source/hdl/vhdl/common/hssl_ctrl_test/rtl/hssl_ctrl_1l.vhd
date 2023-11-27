@@ -16,12 +16,15 @@ entity hssl_ctrl_1l is
     i_reset_n              : in  std_logic;
     -- Global
     i_en                   : in  std_logic;
+    i_disable_header       : in  std_logic;
     i_device_id            : in  std_logic_vector(DEVICE_ID_WIDTH-1 downto 0);
     -- Data interface
     i_tx_req               : in  std_logic;
     o_tx_ack               : out std_logic;
     i_tx_data              : in  std_logic_vector(31 downto 0);
+    i_tx_last              : in  std_logic;
     o_rx_valid             : out std_logic;
+    o_rx_last              : out std_logic;
     o_rx_data              : out std_logic_vector(31 downto 0);
     -- Sync interface
     i_sync_master          : in  std_logic;
@@ -105,36 +108,41 @@ architecture rtl of hssl_ctrl_1l is
   ------------------------------------------------------------
 
   -- RX interface
-  signal rx_src_id          : std_logic_vector(3 downto 0);
-  signal rx_dst_id          : std_logic_vector(3 downto 0);
-  signal rx_payload_size    : unsigned(7 downto 0);
-  signal rx_frame_size      : unsigned(7 downto 0);
-  signal rx_counter         : unsigned(7 downto 0);
-  signal rx_header          : std_logic_vector(31 downto 0);
-  signal rx_fsm_state       : rx_state_type;
-  signal rx_fifo_empty      : std_logic;
-  signal rx_fifo_full       : std_logic;
-  signal rx_fifo_rd_en      : std_logic;
-  signal rx_fifo_wr_en      : std_logic;
-  signal rx_fifo_dout       : std_logic_vector(31 downto 0);
-  signal rx_fifo_din        : std_logic_vector(31 downto 0);
-  signal rx_fifo_data_count : std_logic_vector(10 downto 0);
+  signal rx_src_id            : std_logic_vector(3 downto 0);
+  signal rx_dst_id            : std_logic_vector(3 downto 0);
+  signal rx_header            : std_logic_vector(31 downto 0);
+  signal rx_fsm_state         : rx_state_type;
+  signal rx_fifo_full         : std_logic;
+  signal rx_s_tvalid          : std_logic;
+  signal rx_s_tlast           : std_logic;
+  signal rx_s_tdata           : std_logic_vector(31 downto 0);
+  
+  signal rx_m_tvalid          : std_logic;
+  signal rx_m_tvalid_d        : std_logic;
+  signal rx_m_tvalid_re       : std_logic;
+  signal rx_m_tready          : std_logic;
+  signal rx_m_tdata           : std_logic_vector(31 downto 0);
+  signal rx_m_tlast           : std_logic;
+
   -- TX interface
   signal tx_fsm_state       : tx_state_type;
-  signal tx_out_fsm_state   : tx_out_state_type;
   signal tx_ack             : std_logic;
   signal tx_bypass_data     : std_logic_vector(31 downto 0);
-  signal tx_out_data_count  : unsigned(7 downto 0);
-  signal tx_out_sending     : std_logic;
   signal tx_bypass_last     : std_logic;
   signal tx_bypass_req      : std_logic;
   signal tx_bypass_ack      : std_logic;
-  signal tx_fifo_empty      : std_logic;
   signal tx_fifo_full       : std_logic;
-  signal tx_fifo_rd_en      : std_logic;
-  signal tx_fifo_wr_en      : std_logic;
-  signal tx_fifo_dout       : std_logic_vector(31 downto 0);
-  signal tx_fifo_din        : std_logic_vector(31 downto 0);
+
+  signal tx_s_tvalid          : std_logic;
+  signal tx_s_tready          : std_logic;
+  signal tx_s_tdata           : std_logic_vector(31 downto 0);
+  signal tx_s_tlast           : std_logic;
+
+  signal tx_m_tvalid          : std_logic;
+  signal tx_m_tready          : std_logic;
+  signal tx_m_tdata           : std_logic_vector(31 downto 0);
+  signal tx_m_tlast           : std_logic;
+ 
 
   ------------------------------------------------------------
   -- Sync logic
@@ -189,7 +197,6 @@ architecture rtl of hssl_ctrl_1l is
   
   attribute mark_debug of tx_fsm_state  : signal is "true";
 
-
 begin
 
   o_hssl_ctrl_debug_port(0)           <= user_clk;
@@ -233,31 +240,33 @@ begin
       else
         case (rx_fsm_state) is
           when RX_WAIT_FOR_HEADER  =>
-                                    if (rx_fifo_empty /= '1') then
-                                      rx_fsm_state <= RX_PARSE_HEADER;
+                                    if (rx_m_tvalid_re = '1') then
+                                      if (i_disable_header = '1') then
+                                        rx_fsm_state <= RX_RCV_FRAME;
+                                      else
+                                        rx_fsm_state <= RX_PARSE_HEADER;
+                                      end if;
                                     end if;
           when RX_PARSE_HEADER     =>
                                       rx_fsm_state <= RX_WAIT_FOR_DATA;
           when RX_WAIT_FOR_DATA    =>
-                                    if (unsigned(rx_fifo_data_count) >= rx_frame_size) then
-                                      if (rx_dst_id = i_device_id) then
-                                        rx_fsm_state <= RX_RCV_FRAME;
-                                      elsif (rx_src_id = i_device_id) then
-                                        rx_fsm_state <= RX_TERM_FRAME;
-                                      else
-                                        rx_fsm_state <= RX_BYPASS_FRAME;
-                                      end if;
+                                    if (rx_dst_id = i_device_id) then
+                                      rx_fsm_state <= RX_RCV_FRAME;
+                                    elsif (rx_src_id = i_device_id) then
+                                      rx_fsm_state <= RX_TERM_FRAME;
+                                    else
+                                      rx_fsm_state <= RX_BYPASS_FRAME;
                                     end if;
           when RX_RCV_FRAME        =>
-                                    if (rx_counter = rx_payload_size) then
+                                    if (rx_m_tlast = '1') then
                                       rx_fsm_state <= RX_WAIT_FOR_HEADER;
                                     end if;
           when RX_TERM_FRAME       =>
-                                    if (rx_counter = rx_payload_size) then
+                                    if (rx_m_tlast = '1') then
                                       rx_fsm_state <= RX_WAIT_FOR_HEADER;
                                     end if;
           when RX_BYPASS_FRAME     =>
-                                    if ((rx_counter = rx_payload_size) and (tx_bypass_ack = '1')) then
+                                    if ((rx_m_tlast = '1') and (tx_bypass_ack = '1')) then
                                       rx_fsm_state <= RX_WAIT_FOR_HEADER;
                                     end if;
         end case;
@@ -265,18 +274,16 @@ begin
     end if;
   end process;
 
-  rx_fifo_rd_en <= '1' when ((rx_fsm_state = RX_RCV_FRAME) or (rx_fsm_state = RX_TERM_FRAME) or
-                             ((rx_fsm_state = RX_BYPASS_FRAME) and (tx_bypass_ack = '1'))) else '0';
+  rx_m_tready <= '1' when ((rx_fsm_state = RX_RCV_FRAME) or (rx_fsm_state = RX_TERM_FRAME) or
+                           ((rx_fsm_state = RX_BYPASS_FRAME) and (tx_bypass_ack = '1'))) else '0';
 
   tx_bypass_req <= '1' when (rx_fsm_state = RX_BYPASS_FRAME) else '0';
+  tx_bypass_last <= '1' when ((rx_fsm_state = RX_BYPASS_FRAME) and (rx_m_tlast = '1')) else '0';
+  tx_bypass_data <= rx_m_tdata;
 
-  tx_bypass_data <= rx_fifo_dout;
-
-  -- Will be needed in the future
-  tx_bypass_last <= '1' when ((rx_fsm_state = RX_BYPASS_FRAME) and (rx_counter = rx_payload_size)) else '0';
-
-  o_rx_valid <= '1' when ((rx_fsm_state = RX_RCV_FRAME) and (rx_fifo_rd_en = '1')) else '0';
-  o_rx_data  <= rx_fifo_dout;
+  o_rx_valid <= rx_m_tready;
+  o_rx_data <= rx_m_tdata;
+  o_rx_last <= rx_m_tlast;
 
   process (i_clk)
   begin
@@ -285,7 +292,7 @@ begin
         rx_header <= (others => '0');
       else
         if (rx_fsm_state = RX_PARSE_HEADER) then
-          rx_header <= rx_fifo_dout;
+          rx_header <= rx_m_tdata;
         end if;
       end if;
     end if;
@@ -293,33 +300,21 @@ begin
 
   rx_src_id <= rx_header(31 downto 28);
   rx_dst_id <= rx_header(27 downto 24);
-  rx_payload_size <= unsigned(rx_header(23 downto 16));
-
-  rx_frame_size <= rx_payload_size + 1;
-
-  process (i_clk)
-  begin
-    if (rising_edge(i_clk)) then
-      if (reset_n='0') then
-        rx_counter <= (others => '0');
-      else
-        if (rx_fsm_state = RX_WAIT_FOR_HEADER) then
-          rx_counter <= (others => '0');
-        elsif (rx_fifo_rd_en = '1') then
-          rx_counter <= rx_counter + 1;
-        end if;
-      end if;
-    end if;
-  end process;
-
 
   -- RX in logic
   -----------------------------------------------
 
-  rx_fifo_din <= axi_rx_data;
+  rx_s_tdata <= axi_rx_data;
+  rx_s_tlast  <= axi_rx_tlast;
+  rx_s_tvalid <= axi_rx_tvalid and en_dd;
 
-  rx_fifo_wr_en <= axi_rx_tvalid and en_dd;
+  rx_m_tvalid_re <= rx_m_tvalid and not rx_m_tvalid_d;
 
+  process(i_clk) begin
+    if rising_edge(i_clk) then
+      rx_m_tvalid_d <= rx_m_tvalid;
+    end if;
+  end process;
 
   -- TX logic
   -----------------------------------------------
@@ -346,7 +341,7 @@ begin
                                     tx_fsm_state <= TX_IDLE;
                                   end if;
           when TX_BYPASS   =>
-                                  if ((tx_bypass_req = '1') and (tx_bypass_last = '1') and (tx_fifo_wr_en = '1')) then
+                                  if ((tx_bypass_req = '1') and (tx_bypass_last = '1') and (tx_s_tvalid = '1')) then
                                     tx_fsm_state <= TX_IDLE;
                                   end if;
         end case;
@@ -354,67 +349,22 @@ begin
     end if;
   end process;
 
-  tx_ack        <= '1' when ((tx_fsm_state = TX_SEND) and (i_tx_req = '1')) else '0';
-
+  tx_ack        <= '1' when ((tx_fsm_state = TX_SEND) and (i_tx_req = '1') and (tx_s_tready = '1')) else '0';
   tx_bypass_ack <= '1' when ((tx_fsm_state = TX_BYPASS) and (tx_bypass_req = '1')) else '0';
-
-  tx_fifo_din   <= i_tx_data when (tx_fsm_state = TX_SEND) else tx_bypass_data;
-
-  tx_fifo_wr_en <= tx_ack or tx_bypass_ack;
-
   o_tx_ack      <= tx_ack;
 
+  tx_s_tdata    <= i_tx_data when (tx_fsm_state = TX_SEND) else tx_bypass_data;
+  tx_s_tvalid   <= tx_ack or tx_bypass_ack;
+  tx_s_tlast    <= i_tx_last when (tx_fsm_state = TX_SEND) else tx_bypass_last;
 
   -- TX out logic
   -------------------------------------------------
 
-  axi_tx_tvalid  <= '1' when ((tx_out_fsm_state = TX_OUT_SEND) and (tx_fifo_empty /= '1')) else '0';
-
-  tx_out_sending <= axi_tx_tvalid and axi_tx_tready;
-
-  tx_fifo_rd_en  <= tx_out_sending;
-
-  axi_tx_tlast   <= '1' when ((tx_out_fsm_state = TX_OUT_SEND) and (tx_out_data_count = 0)) else '0';
-
-  process (user_clk)
-  begin
-    if (rising_edge(user_clk)) then
-      if (reset_n = '0') then
-        tx_out_data_count <= (others => '0');
-      else
-        if (tx_out_fsm_state = TX_OUT_IDLE) then
-          tx_out_data_count <= unsigned(tx_fifo_dout(23 downto 16));  -- payload size
-        elsif (tx_out_sending = '1') then
-            tx_out_data_count <= tx_out_data_count - 1;
-          end if;
-        end if;
-    end if;
-  end process;
-
-  -- TX out fsm
-  process (user_clk)
-  begin
-    if (rising_edge(user_clk)) then
-      if (reset_n='0') then
-        tx_out_fsm_state <= TX_OUT_IDLE;
-      else
-        case (tx_out_fsm_state) is
-          when TX_OUT_IDLE  =>
-                              if (tx_fifo_empty /= '1') then
-                                tx_out_fsm_state <= TX_OUT_SEND;
-                              end if;
-          when TX_OUT_SEND  =>
-                              if ((tx_out_data_count = 0) and (tx_out_sending = '1')) then
-                                tx_out_fsm_state <= TX_OUT_IDLE;
-                              end if;
-        end case;
-      end if;
-    end if;
-  end process;
-
-  axi_tx_data <= tx_fifo_dout when (axi_tx_tready = '1') else axi_tx_data_sync;
-
-  axi_tx_tstrb <= "1111";
+  axi_tx_tvalid <= tx_m_tvalid;
+  axi_tx_tlast  <= tx_m_tlast;
+  tx_m_tready   <= axi_tx_tready;
+  axi_tx_data   <= tx_m_tdata when (axi_tx_tready = '1') else axi_tx_data_sync;
+  axi_tx_tstrb  <= "1111";
 
   -----------------------------------------------------------------------------------------
   -- SYNC interface logic
@@ -681,36 +631,38 @@ begin
   -----------------------------------------------------------------------------------------
 
   -- RX fifo
-  u_hssl_ctrl_fifo_rx : hssl_ctrl_fifo_1x
+  u_hssl_ctrl_fifo_rx : hssl_ctrl_axis_fifo
   port map (
-    rst           => reset,
-    wr_clk        => user_clk,
-    rd_clk        => i_clk,
-    din           => rx_fifo_din,
-    wr_en         => rx_fifo_wr_en,
-    rd_en         => rx_fifo_rd_en,
-    dout          => rx_fifo_dout,
-    full          => rx_fifo_full,
-    empty         => rx_fifo_empty,
-    rd_data_count => rx_fifo_data_count,
-    wr_data_count => open
-    );
+    m_aclk         => i_clk,
+    s_aclk         => user_clk,
+    s_aresetn      => reset_n,
+    s_axis_tvalid  => rx_s_tvalid,
+    s_axis_tready  => open,
+    s_axis_tdata   => rx_s_tdata,
+    s_axis_tlast   => rx_s_tlast,
+    m_axis_tvalid  => rx_m_tvalid,
+    m_axis_tready  => rx_m_tready,
+    m_axis_tdata   => rx_m_tdata,
+    m_axis_tlast   => rx_m_tlast,
+    axis_prog_full => rx_fifo_full
+  );
 
   -- TX fifo
-  u_hssl_ctrl_fifo_tx : hssl_ctrl_fifo_1x
+  u_hssl_ctrl_fifo_tx : hssl_ctrl_axis_fifo
   port map (
-    rst           => reset,
-    wr_clk        => i_clk,
-    rd_clk        => user_clk,
-    din           => tx_fifo_din,
-    wr_en         => tx_fifo_wr_en,
-    rd_en         => tx_fifo_rd_en,
-    dout          => tx_fifo_dout,
-    full          => tx_fifo_full,
-    empty         => tx_fifo_empty,
-    rd_data_count => open,
-    wr_data_count => open
-    );
+    s_aclk         => i_clk,
+    m_aclk         => user_clk,
+    s_aresetn      => reset_n,
+    s_axis_tvalid  => tx_s_tvalid,
+    s_axis_tready  => tx_s_tready,
+    s_axis_tdata   => tx_s_tdata,
+    s_axis_tlast   => tx_s_tlast,
+    m_axis_tvalid  => tx_m_tvalid,
+    m_axis_tready  => tx_m_tready,
+    m_axis_tdata   => tx_m_tdata,
+    m_axis_tlast   => tx_m_tlast,
+    axis_prog_full => tx_fifo_full
+  );
 
   -- Aurora instance
   u_aurora_wrapper : aurora_wrapper_1l

@@ -64,12 +64,15 @@ package hssl_comp_dec_1l is
       i_reset_n              : in  std_logic;
       -- Global
       i_en                   : in  std_logic;
+      i_disable_header       : in  std_logic;
       i_device_id            : in  std_logic_vector(DEVICE_ID_WIDTH-1 downto 0);
       -- Data interface
       i_tx_req               : in  std_logic;
       o_tx_ack               : out std_logic;
       i_tx_data              : in  std_logic_vector(31 downto 0);
+      i_tx_last              : in  std_logic;
       o_rx_valid             : out std_logic;
+      o_rx_last              : out std_logic;
       o_rx_data              : out std_logic_vector(31 downto 0);
       -- Sync interface
       i_sync_master          : in  std_logic;
@@ -178,8 +181,9 @@ package hssl_comp_dec_1l is
     port(
       i_clk_p          : in  std_logic;
       i_clk_n          : in  std_logic;
-      i_reset        : in  std_logic;
+      i_reset          : in  std_logic;
       -- user IO
+      i_disable_header : in  std_logic;
       i_unit_id        : in  std_logic_vector(3 downto 0);
       o_led            : out std_logic_vector(3 downto 0);
       i_sw             : in  std_logic_vector(3 downto 0);
@@ -211,8 +215,9 @@ package hssl_comp_dec_1l is
     port(
       i_clk_p          : in  std_logic;
       i_clk_n          : in  std_logic;
-      i_reset        : in  std_logic;
+      i_reset          : in  std_logic;
       -- user IO
+      i_disable_header : in  std_logic;
       i_unit_id        : in  std_logic_vector(3 downto 0);
       o_led            : out std_logic_vector(3 downto 0);
       i_sw             : in  std_logic_vector(3 downto 0);

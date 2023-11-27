@@ -19,6 +19,7 @@ entity hssl_ctrl_test_1l_loopback is
     i_clk_n             : in  std_logic;
     i_reset             : in  std_logic;
     -- User IO
+    i_disable_header    : in  std_logic;
     i_unit_id           : in  std_logic_vector(3 downto 0);  -- We have 8 sw on vc707 board. Top 4(sw 1 to 4) are for unit_id.
     o_led               : out std_logic_vector(3 downto 0);
     i_sw                : in  std_logic_vector(3 downto 0);  -- We have 8 sw on vc707 board. Lower 4(sw 5 to 8) are for control.
@@ -122,11 +123,12 @@ architecture rtl of hssl_ctrl_test_1l_loopback is
   signal rx_mem           : rx_mem_type := (others => (others => '0'));
   -- Counter signals which direct data flow into memory locations
   signal cnt_rx           : unsigned(LOG2(VAR_NUM_PER_LOOPBACK_STREAM)-1 downto 0);
+  signal cnt_rx_prev      : unsigned(LOG2(VAR_NUM_PER_LOOPBACK_STREAM)-1 downto 0);
   signal cnt_tx           : unsigned(LOG2(VAR_NUM_PER_LOOPBACK_STREAM)-1 downto 0);
   signal cnt_tx_tc        : std_logic;
   -- Rising and falling edge signals of rx_valid
-  signal rx_valid_fe      : std_logic;
   signal rx_valid_re      : std_logic;
+  signal rx_valid_fe      : std_logic;
   -- Parsed header signal
   signal parsed_header    : std_logic_vector(DATA_WIDTH-1 downto 0);
   -- Extracted data signals from header
@@ -135,6 +137,7 @@ architecture rtl of hssl_ctrl_test_1l_loopback is
   signal data_for_future_usage  : std_logic_vector(7 downto 0);
   signal rx_src_id        : std_logic_vector(3 downto 0);
   signal rx_dst_id        : std_logic_vector(3 downto 0);
+  signal tx_last          : std_logic;
   -- Signalization for deliting header data
   
   attribute mark_debug of tx_data : signal is "true";
@@ -143,7 +146,6 @@ architecture rtl of hssl_ctrl_test_1l_loopback is
 
   attribute mark_debug of rx_valid    : signal is "true";
   attribute mark_debug of rx_data     : signal is "true";
-  attribute mark_debug of rx_valid_fe : signal is "true";
   attribute mark_debug of parsed_header : signal is "true";
   attribute mark_debug of hssl_ctrl_reset_n : signal is "true";
 
@@ -236,7 +238,7 @@ begin
   sec_cnt_en <= '1' when (fsm_state = IDLE) else '0';
   sec_cnt_tc <= '1' when (sec_cnt = ONE_SEC_TC - 1) else '0';
 
-  -- ______________________________ RX FSM _____________________________________
+  -- ______________________________ TX FSM _____________________________________
   process (clk, reset_n)
   begin
     if (reset_n='0') then
@@ -310,11 +312,13 @@ begin
     i_reset_n              => hssl_ctrl_reset_n,
     -- Global
     i_en                   => '1',
+    i_disable_header       => i_disable_header,
     i_device_id            => unit_id,
     -- Data interface
     i_tx_req               => tx_req,
     o_tx_ack               => tx_ack,
     i_tx_data              => tx_data,
+    i_tx_last              => tx_last,
     o_rx_valid             => rx_valid,
     o_rx_data              => rx_data,
     -- Sync interface
@@ -375,11 +379,14 @@ begin
   process (clk, reset_n)
   begin
     if (reset_n = '0') then
-      cnt_rx <= (others => '0');
+      cnt_rx      <= (others => '0');
+      cnt_rx_prev <= (others => '0');
     elsif (rising_edge(clk)) then
       if (rx_valid_fe = '1') then
-        cnt_rx <= (others => '0');
-      elsif (rx_valid_d = '1') then -- Start counting after the header arrives
+        cnt_rx      <= (others => '0');
+        cnt_rx_prev <= cnt_rx;
+      -- Start counting after the header arrives if header is enabled or if header is disabled start counting when first data word arrives
+      elsif (rx_valid = '1' and (i_disable_header = '1' or rx_valid_d = '1')) then
         cnt_rx <= cnt_rx + 1;
       end if;
     end if;
@@ -398,9 +405,9 @@ begin
       end if;
     end if;
   end process;
-  cnt_tx_tc <= '1' when cnt_tx = unsigned(rx_payload_size) else '0';
+  cnt_tx_tc <= '1' when cnt_tx = unsigned(cnt_rx_prev) - 1 else '0';
 
-  -- Detect falling edge of rx_valid
+  -- Detect rising and falling edges of rx_valid
   process (clk, reset_n)
   begin
     if (reset_n = '0') then
@@ -409,10 +416,9 @@ begin
       rx_valid_d <= rx_valid;
     end if;
   end process;
-  rx_valid_fe <= '1' when (rx_valid_d = '1' and rx_valid = '0') else '0';
 
-  -- Detect rising edge of rx_valid
   rx_valid_re <= '1' when (rx_valid_d = '0' and rx_valid = '1') else '0';
+  rx_valid_fe <= '1' when (rx_valid_d = '1' and rx_valid = '0') else '0';
 
   -- Extract data from header and store them in registers
   process (clk, reset_n)
@@ -444,7 +450,11 @@ begin
       case (loopback_fsm) is
         when IDLE       =>
                             if (link_channel_up = '1' and rx_valid_fe = '1') then
-                              loopback_fsm <= GET_HDR;
+                              if (i_disable_header = '1') then
+                                loopback_fsm <= START_SENDING_TX_REQ;
+                              else
+                                loopback_fsm <= GET_HDR;
+                              end if;
                             end if;
         when GET_HDR    =>
                             loopback_fsm <= LOOKUP_ID;
@@ -455,12 +465,16 @@ begin
                               loopback_fsm <= IDLE;
                             end if;
         when START_SENDING_TX_REQ =>
-                            loopback_fsm <= SEND_HEADER;
+                            if (i_disable_header = '1') then
+                              loopback_fsm <= SEND_DATA_BACK;
+                            else
+                              loopback_fsm <= SEND_HEADER;
+                            end if;
         when SEND_HEADER   =>            
                               loopback_fsm <= SEND_DATA_BACK;
         when SEND_DATA_BACK =>
                             if (tx_ack = '1') then
-                                if (cnt_tx = (unsigned(rx_payload_size) - 1)) then
+                                if (cnt_tx_tc = '1') then
                                   loopback_fsm <= IDLE;
                                 end if;
                             end if;
@@ -468,7 +482,8 @@ begin
     end if;
   end process;
 
-  tx_req         <= '1'            when ((loopback_fsm = START_SENDING_TX_REQ or loopback_fsm = SEND_HEADER) or (loopback_fsm = SEND_DATA_BACK )) else '0';
-  tx_data        <= parsed_header  when (loopback_fsm = SEND_HEADER)  else rx_mem(to_integer(cnt_tx)); 
+  tx_req  <= '1'           when ((loopback_fsm = START_SENDING_TX_REQ or loopback_fsm = SEND_HEADER) or (loopback_fsm = SEND_DATA_BACK )) else '0';
+  tx_data <= parsed_header when (loopback_fsm = SEND_HEADER) else rx_mem(to_integer(cnt_tx)); 
+  tx_last <= cnt_tx_tc     when (loopback_fsm = SEND_DATA_BACK) else '0';
 
 end rtl;

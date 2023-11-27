@@ -8,20 +8,21 @@ use work.hssl_comp_dec_1l.all;
 entity hssl_ctrl_test_1l is
   generic(
     -- General
-    NO_OF_UNIT          :     natural := 3;
-    ONE_SEC_TC          :     natural := 200000000
+    NO_OF_UNIT          :  natural := 3;
+    ONE_SEC_TC          :  natural := 200000000
     );
   port(
-    i_clk_p             : in  std_logic;
-    i_clk_n             : in  std_logic;
-    i_reset           : in  std_logic;
+    i_clk_p             :  in std_logic;
+    i_clk_n             :  in std_logic;
+    i_reset             :  in std_logic;
     -- User IO
-    i_unit_id           : in  std_logic_vector(3 downto 0);  -- We have 8 sw on vc707 board. Top 4(sw 1 to 4) are for unit_id.
+    i_disable_header    :  in std_logic;
+    i_unit_id           :  in std_logic_vector(3 downto 0);  -- We have 8 sw on vc707 board. Top 4(sw 1 to 4) are for unit_id.
     o_led               : out std_logic_vector(3 downto 0);
-    i_sw                : in  std_logic_vector(3 downto 0);  -- We have 8 sw on vc707 board. Lower 4(sw 5 to 8) are for control.
+    i_sw                :  in std_logic_vector(3 downto 0);  -- We have 8 sw on vc707 board. Lower 4(sw 5 to 8) are for control.
     -- Aurora GTX clock
-    i_gtx_clk_p         : in  std_logic;
-    i_gtx_clk_n         : in  std_logic;
+    i_gtx_clk_p         :  in std_logic;
+    i_gtx_clk_n         :  in std_logic;
     --
     sfp_tx_disable_o    : out std_logic;  -- For sfp to work, we need to assign this pin to 0.
     -- Aurora life
@@ -29,8 +30,8 @@ entity hssl_ctrl_test_1l is
     o_channel_up        : out std_logic;
     o_error             : out std_logic;
     -- Aurora GTX data
-    i_gtx_rx_p          : in  std_logic;
-    i_gtx_rx_n          : in  std_logic;
+    i_gtx_rx_p          :  in std_logic;
+    i_gtx_rx_n          :  in std_logic;
     o_gtx_tx_p          : out std_logic;
     o_gtx_tx_n          : out std_logic
   );
@@ -60,9 +61,11 @@ architecture rtl of hssl_ctrl_test_1l is
   signal tx_req               : std_logic;
   signal tx_ack               : std_logic;
   signal tx_data              : std_logic_vector(31 downto 0);
+  signal tx_last              : std_logic;
   signal tx_data_we           : std_logic;
   signal tx_paylod_size       : std_logic_vector(7 downto 0);
   signal rx_valid             : std_logic;
+  signal rx_last              : std_logic;
   signal rx_data              : std_logic_vector(31 downto 0);
   signal msg_heder            : std_logic_vector(31 downto 0);
   -- Data counter
@@ -147,7 +150,7 @@ begin
       end if;
     end if;
   end process;
-  data_gen_en <= '1' when (fsm_state = SEND_CON_4) else '0';
+  data_gen_en <= '1' when (fsm_state = SEND_CON_4 and tx_ack = '1') else '0';
 
   -- Data counter
   process (clk, reset_n)
@@ -155,14 +158,14 @@ begin
     if reset_n = '0' then 
       send_data_pckt <= (others => '0');
     elsif rising_edge(clk) then 
-      if(fsm_state = GET_HDR) then
+      if(fsm_state = IDLE) then
         send_data_pckt <= unsigned(tx_paylod_size); -- Header is not included as data
       elsif (data_send_en = '1') then    
         send_data_pckt <= send_data_pckt - 1;
       end if;
     end if;
   end process; 
-  data_send_en <= '1' when (fsm_state = SEND_CON_4) else '0';
+  data_send_en <= '1' when (fsm_state = SEND_CON_4 and tx_ack = '1') else '0';
 
   -- Generate destination unit addr
   process (clk, reset_n)
@@ -209,7 +212,11 @@ begin
       case (fsm_state) is
         when IDLE       =>
                             if (link_channel_up = '1' and sec_cnt_tc = '1') then
-                              fsm_state <= GET_HDR;
+                              if (i_disable_header = '1') then
+                                fsm_state <= SEND_CON_4;
+                              else
+                                fsm_state <= GET_HDR;
+                              end if;
                             end if;
         when GET_HDR    =>
                             if (dest_unit = unsigned(i_unit_id)) then
@@ -223,7 +230,11 @@ begin
                             end if;
         when SEND_CON_4 =>
                             if((send_data_pckt - 1) = 0) then
-                              fsm_state <= NEXT_UNIT;
+                              if (i_disable_header = '1') then
+                                fsm_state <= IDLE;
+                              else
+                                fsm_state <= NEXT_UNIT;
+                              end if;
                             end if;
         when NEXT_UNIT  =>
                             if (dest_unit_tc = '1') then
@@ -235,10 +246,11 @@ begin
     end if;
   end process;
     
+  tx_last        <= '1'       when (((send_data_pckt - 1) = 0) and (fsm_state = SEND_CON_4)) else '0';
   tx_req         <= '1'       when (fsm_state /= IDLE and fsm_state /= GET_HDR and fsm_state /= NEXT_UNIT) else '0';
   tx_data        <= msg_heder when (fsm_state = WAIT_ACK)                                                  else std_logic_vector(data_gen);  --  when (fsm_state = SEND_CON_4) else ; used for simulation purposes
   tx_data_we     <= '1'       when ((fsm_state = WAIT_ACK) or (fsm_state = SEND_CON_4))                    else '0';
-  tx_paylod_size <= "00000001";
+  tx_paylod_size <= "00001000";
 
   -- Register msg header
   process (clk, reset_n)
@@ -275,12 +287,15 @@ begin
     i_reset_n              => hssl_ctrl_reset_n,
     -- Global
     i_en                   => '1',
+    i_disable_header       => i_disable_header,
     i_device_id            => unit_id,
     -- Data interface
     i_tx_req               => tx_req,
     o_tx_ack               => tx_ack,
     i_tx_data              => tx_data,
+    i_tx_last              => tx_last,
     o_rx_valid             => rx_valid,
+    o_rx_last              => rx_last,
     o_rx_data              => rx_data,
     -- Sync interface
     i_sync_master          => i_sw(0),
